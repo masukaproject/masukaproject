@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct TabsView: View {
+    
     var body: some View {
         TabView {
             
-            Text("Home Page Here")
-            .tabItem {
-                VStack {
-                    Image(systemName: "house.fill")
-                    Text("Home")
+            HomeView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
                 }
-            }
             
-            Text("Search Page Here")
+            SearchView()
                 .tabItem {
                     VStack {
                         Image(systemName: "magnifyingglass")
@@ -27,7 +28,7 @@ struct TabsView: View {
                     }
                 }
             
-            Text("Settings Page Here")
+            SettingsView()
                 .tabItem {
                     VStack {
                         Image(systemName: "gearshape.fill")
@@ -35,7 +36,7 @@ struct TabsView: View {
                     }
                 }
             
-            Text("Profile Page Here")
+            ProfileView()
                 .tabItem {
                     VStack {
                         Image(systemName: "person.fill")

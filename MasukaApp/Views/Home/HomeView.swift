@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ProjectListView()
+                .navigationBarTitle("Suggested Projects")
+                .navigationBarItems(leading:
+                                        Button(action: {
+                                            
+                                        }) {
+                                            Image(systemName: "text.alignleft")
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(height: 22)
+                                        }
+                )
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        
     }
 }
 
