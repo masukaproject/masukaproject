@@ -6,15 +6,9 @@
 //
 
 import SwiftUI
-import Firebase
 
 @main
 struct MasukaApp: App {
-    
-    init() {
-        FirebaseApp.configure()
-    }
-    
     var body: some Scene {
         WindowGroup {
             TabsView()
