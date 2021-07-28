@@ -21,6 +21,7 @@
 		00E2280826AE674400E5E39D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280726AE674400E5E39D /* SettingsView.swift */; };
 		00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280926AE6FA800E5E39D /* ProjectListView.swift */; };
 		00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */; };
+		4F3ECEAA26B20B760048C120 /* SignUp2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3ECEA926B20B760048C120 /* SignUp2View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		00E2280726AE674400E5E39D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		00E2280926AE6FA800E5E39D /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		4F3ECEA926B20B760048C120 /* SignUp2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp2View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				00E227F426AE637D00E5E39D /* LoginView.swift */,
+				4F3ECEA926B20B760048C120 /* SignUp2View.swift */,
 				00E227F726AE63F500E5E39D /* SignUpView.swift */,
 				00E227F926AE640800E5E39D /* UpdateAccountView.swift */,
 				00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */,
@@ -239,6 +242,7 @@
 				00E227F826AE63F500E5E39D /* SignUpView.swift in Sources */,
 				00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */,
 				00E2280826AE674400E5E39D /* SettingsView.swift in Sources */,
+				4F3ECEAA26B20B760048C120 /* SignUp2View.swift in Sources */,
 				00E2280426AE673500E5E39D /* SearchView.swift in Sources */,
 				00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */,
 				00E227E226AE569100E5E39D /* TabsView.swift in Sources */,
