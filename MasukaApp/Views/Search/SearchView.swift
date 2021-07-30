@@ -2,7 +2,7 @@
 //  SearchView.swift
 //  MasukaApp
 //
-//  Created by Uthman Mohamed on 2021-07-25.
+//  Created by Masuka Org on 2021-07-25.
 //
 
 import SwiftUI

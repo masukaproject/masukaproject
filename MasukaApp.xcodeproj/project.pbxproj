@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		008C7C4326B3C36D0036110F /* PasswordBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C7C4226B3C36D0036110F /* PasswordBox.swift */; };
+		008C7C4526B3CDA70036110F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C7C4426B3CDA70036110F /* Constants.swift */; };
 		00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227DF26AE569100E5E39D /* MasukaApp.swift */; };
 		00E227E226AE569100E5E39D /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227E126AE569100E5E39D /* TabsView.swift */; };
 		00E227E426AE569300E5E39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E227E326AE569300E5E39D /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		008C7C4226B3C36D0036110F /* PasswordBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordBox.swift; sourceTree = "<group>"; };
+		008C7C4426B3CDA70036110F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00E227DC26AE569100E5E39D /* MasukaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasukaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E227DF26AE569100E5E39D /* MasukaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasukaApp.swift; sourceTree = "<group>"; };
 		00E227E126AE569100E5E39D /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				00E227FE26AE66BC00E5E39D /* Search */,
 				00E2280026AE66C400E5E39D /* Profile */,
 				00E227FF26AE66C100E5E39D /* Settings */,
+				008C7C4426B3CDA70036110F /* Constants.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				00E227F426AE637D00E5E39D /* LoginView.swift */,
+				008C7C4226B3C36D0036110F /* PasswordBox.swift */,
 				00E227F726AE63F500E5E39D /* SignUpView.swift */,
 				00E227F926AE640800E5E39D /* UpdateAccountView.swift */,
 				00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */,
@@ -235,6 +241,7 @@
 				00E227FA26AE640800E5E39D /* UpdateAccountView.swift in Sources */,
 				00E2280626AE673E00E5E39D /* ProfileView.swift in Sources */,
 				00E2280226AE672600E5E39D /* HomeView.swift in Sources */,
+				008C7C4326B3C36D0036110F /* PasswordBox.swift in Sources */,
 				00E227F526AE637D00E5E39D /* LoginView.swift in Sources */,
 				00E227F826AE63F500E5E39D /* SignUpView.swift in Sources */,
 				00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */,
@@ -242,6 +249,7 @@
 				00E2280426AE673500E5E39D /* SearchView.swift in Sources */,
 				00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */,
 				00E227E226AE569100E5E39D /* TabsView.swift in Sources */,
+				008C7C4526B3CDA70036110F /* Constants.swift in Sources */,
 				00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */,
 				00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */,
 			);

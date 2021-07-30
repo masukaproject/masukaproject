@@ -2,7 +2,7 @@
 //  ProjectListView.swift
 //  MasukaApp
 //
-//  Created by Uthman Mohamed on 2021-07-26.
+//  Created by Masuka Org on 2021-07-26.
 //
 
 import SwiftUI
@@ -12,14 +12,12 @@ struct ProjectListView: View {
     private let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
-        GeometryReader { geo in
-            ScrollView(showsIndicators: false) {
-                LazyVGrid(columns: gridItems) {
-                    ForEach(0..<10) { _ in
-                        NavigationLink(
-                            destination: Text("Destination")) {
-                            ProjectCardView()
-                        }
+        ScrollView(showsIndicators: false) {
+            LazyVGrid(columns: gridItems) {
+                ForEach(0..<10) { _ in
+                    NavigationLink(
+                        destination: Text("Destination")) {
+                        ProjectCardView()
                     }
                 }
             }

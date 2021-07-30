@@ -2,7 +2,7 @@
 //  ProjectCardView.swift
 //  MasukaApp
 //
-//  Created by Uthman Mohamed on 2021-07-26.
+//  Created by Masuka Org on 2021-07-26.
 //
 
 import SwiftUI
@@ -12,7 +12,7 @@ struct ProjectCardView: View {
         ZStack (alignment: .top) {
             RoundedRectangle(cornerRadius: 25.0)
                 .foregroundColor(.white)
-                .shadow(color: .black.opacity(0.5), radius: 10, y: 5)
+                .shadow(color: .black.opacity(0.5), radius: 3, y: 5)
                 .padding(.top, 50)
             Circle()
                 .frame(width: 140, height: 140)
