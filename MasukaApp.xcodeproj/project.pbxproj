@@ -23,6 +23,7 @@
 		00E2280826AE674400E5E39D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280726AE674400E5E39D /* SettingsView.swift */; };
 		00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280926AE6FA800E5E39D /* ProjectListView.swift */; };
 		00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */; };
+		00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521A626B5281E00723DC0 /* LargeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		00E2280726AE674400E5E39D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		00E2280926AE6FA800E5E39D /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		00E521A626B5281E00723DC0 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				00E227FE26AE66BC00E5E39D /* Search */,
 				00E2280026AE66C400E5E39D /* Profile */,
 				00E227FF26AE66C100E5E39D /* Settings */,
+				00E521A526B527F800723DC0 /* Common */,
 				008C7C4426B3CDA70036110F /* Constants.swift */,
 			);
 			path = Views;
@@ -167,6 +170,14 @@
 				00E2280526AE673E00E5E39D /* ProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		00E521A526B527F800723DC0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				00E521A626B5281E00723DC0 /* LargeButton.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +260,7 @@
 				00E2280426AE673500E5E39D /* SearchView.swift in Sources */,
 				00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */,
 				00E227E226AE569100E5E39D /* TabsView.swift in Sources */,
+				00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */,
 				008C7C4526B3CDA70036110F /* Constants.swift in Sources */,
 				00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */,
 				00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */,

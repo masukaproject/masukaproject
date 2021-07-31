@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct PasswordBox: View {
-    @State var showPassword = false
-    @State var defaultText: String
     @Binding var password: String
+    @State var showPassword = false
+    var defaultText: String
     
     var body: some View {
         ZStack {
@@ -18,7 +18,7 @@ struct PasswordBox: View {
             RoundedRectangle(cornerRadius: 20)
                 .foregroundColor(Color(.systemGray5))
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.blue, style: StrokeStyle(lineWidth: 0.5))
+                .stroke(Color("DarkBrown"), style: StrokeStyle(lineWidth: 0.5))
             
             HStack(spacing: 15) {
                 Image(systemName: "lock")
@@ -33,7 +33,7 @@ struct PasswordBox: View {
                 .disableAutocorrection(true)
                 .autocapitalization(.none)
                 Image(systemName: "eye")
-                    .foregroundColor(showPassword ? .blue : .black.opacity(0.5))
+                    .foregroundColor(showPassword ? .red : .black.opacity(0.5))
                     .onTapGesture {
                         showPassword.toggle()
                     }
@@ -47,6 +47,6 @@ struct PasswordBox: View {
 
 struct PasswordBox_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordBox(defaultText: "Password", password: .constant(""))
+        PasswordBox(password: .constant(""), defaultText: "Password")
     }
 }

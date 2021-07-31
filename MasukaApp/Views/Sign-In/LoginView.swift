@@ -18,9 +18,7 @@ struct LoginView: View {
             ZStack{
                 
                 // MARK: - Background Colour
-                LinearGradient(gradient: .init(colors:
-                                                [Color("Color1"), Color.blue.opacity(0.1)]),
-                               startPoint: .topLeading, endPoint: .bottomTrailing)
+                Color("Beige")
                 
                 VStack(spacing: 15) {
                     
@@ -73,9 +71,12 @@ struct LoginView: View {
                                 self.selection = .signup
                             }
                         }
-                        
+
                     }
                     .background(Color.black.opacity(0.3))
+                    .overlay(
+                        Capsule()   // outline around tabs
+                            .stroke(Color("DarkBrown"), style: StrokeStyle(lineWidth: 0.5)))
                     .clipShape(Capsule())
                     .padding(.top, 25)
                     .padding(.horizontal)
@@ -86,7 +87,7 @@ struct LoginView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .foregroundColor(Color(.systemGray5))
                         RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.blue, style: StrokeStyle(lineWidth: 0.5))
+                            .stroke(Color("DarkBrown"), style: StrokeStyle(lineWidth: 0.5))
                         HStack(spacing: 15) {
                             Image(systemName: "envelope")
                                 .foregroundColor(.black.opacity(0.9))
@@ -101,12 +102,12 @@ struct LoginView: View {
                     
                     
                     // MARK: - Password
-                    PasswordBox(defaultText: "Password", password: $password)
+                    PasswordBox(password: $password, defaultText: "Password")
                     
                     
                     // MARK: - Second Password
                     if selection == .signup {
-                        PasswordBox(defaultText: "Re-Enter Password", password: $secondPassword)
+                        PasswordBox(password: $secondPassword, defaultText: "Re-Enter Password")
                     }
                     
                     
@@ -120,16 +121,7 @@ struct LoginView: View {
                     
                     // MARK: - Login Button
                     NavigationLink(destination: HomeView()) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 20)
-                                .foregroundColor(.white)
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.blue, style: StrokeStyle(lineWidth: 0.5))
-                            Text(selection == .login ? "Login" : "Continue")
-                                .foregroundColor(.black)
-                                .font(.system(size: 24, weight: .semibold))
-                        }
-                        .frame(width: 300, height: 65)
+                        LargeButton(text: selection == .login ? "Login" : "Continue")
                     }
                     .padding(.top, 60)
                 }
@@ -161,4 +153,3 @@ struct LoginView_Previews: PreviewProvider {
         LoginView()
     }
 }
-
