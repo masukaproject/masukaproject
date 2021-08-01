@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     
-    
     var body: some View {
         NavigationView {
             ProjectListView()
@@ -25,7 +24,6 @@ struct HomeView: View {
                                         }
                 )
         }
-//        .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         .navigationViewStyle(StackNavigationViewStyle())
         

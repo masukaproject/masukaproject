@@ -9,14 +9,14 @@ import SwiftUI
 
 struct PasswordBox: View {
     @Binding var password: String
-    @State var showPassword = false
+    @Binding var showPassword: Bool
     var defaultText: String
     
     var body: some View {
         ZStack {
             
             RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(Color(.systemGray5))
+                .foregroundColor(Color(.lightGray))
             RoundedRectangle(cornerRadius: 20)
                 .stroke(Color("DarkBrown"), style: StrokeStyle(lineWidth: 0.5))
             
@@ -47,6 +47,6 @@ struct PasswordBox: View {
 
 struct PasswordBox_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordBox(password: .constant(""), defaultText: "Password")
+        PasswordBox(password: .constant(""), showPassword: .constant(false), defaultText: "Password")
     }
 }

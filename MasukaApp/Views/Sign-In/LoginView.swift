@@ -9,8 +9,12 @@ import SwiftUI
 
 struct LoginView: View {
     @State var email = ""
+    @State var username = ""
     @State var password = ""
     @State var secondPassword = ""
+    @State var showPassword = false
+    @State var showSecondPassword = false
+    
     @State var selection: LoginOrSignUp = .login
     
     var body: some View {
@@ -32,8 +36,8 @@ struct LoginView: View {
                             .clipped()
                         
                         Text("Masuka")
+                            .foregroundColor(.black)
                             .font(.system(size: 64, weight: .medium))
-                            .font(.largeTitle)
                     }
                     
                     
@@ -80,12 +84,16 @@ struct LoginView: View {
                     .clipShape(Capsule())
                     .padding(.top, 25)
                     .padding(.horizontal)
+                    .onChange(of: selection) { _ in
+                        // reset info when user changes from login to signup and vice versa
+                        resetVariables()
+                    }
                     
                     
                     // MARK: - Email
                     ZStack {
                         RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor(Color(.systemGray5))
+                            .foregroundColor(Color(.lightGray))
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color("DarkBrown"), style: StrokeStyle(lineWidth: 0.5))
                         HStack(spacing: 15) {
@@ -101,26 +109,45 @@ struct LoginView: View {
                     .frame(width: 370, height: 60)
                     
                     
+                    // MARK: - Username
+                    if selection == .signup {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundColor(Color(.lightGray))
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color("DarkBrown"), style: StrokeStyle(lineWidth: 0.5))
+                            HStack(spacing: 15) {
+                                Image(systemName: "person")
+                                    .foregroundColor(.black.opacity(0.9))
+                                TextField("Username", text: self.$username)
+                                    .disableAutocorrection(true)
+                                    .autocapitalization(.none)
+                            }
+                            .padding()
+                        }
+                        .frame(width: 370, height: 60)
+                    }
+                    
                     // MARK: - Password
-                    PasswordBox(password: $password, defaultText: "Password")
+                    PasswordBox(password: $password, showPassword: $showPassword, defaultText: "Password")
                     
                     
                     // MARK: - Second Password
                     if selection == .signup {
-                        PasswordBox(password: $secondPassword, defaultText: "Re-Enter Password")
+                        PasswordBox(password: $secondPassword, showPassword: $showSecondPassword, defaultText: "Re-Enter Password")
                     }
                     
                     
-                    // MARK: - Forget Password
+                    // MARK: - Forgot Password
                     if selection == .login {
                         NavigationLink(destination: ForgotPasswordView()) {
-                            Text("Forget Password?")
+                            Text("Forgot Password?")
                         }
                     }
                     
                     
                     // MARK: - Login Button
-                    NavigationLink(destination: HomeView()) {
+                    NavigationLink(destination: TabsView()) {
                         LargeButton(text: selection == .login ? "Login" : "Continue")
                     }
                     .padding(.top, 60)
@@ -132,14 +159,17 @@ struct LoginView: View {
         .navigationViewStyle(StackNavigationViewStyle()) // useful for iPad or landscape view
         .onAppear {
             resetVariables()
+            self.selection = .login
         }
     }
     
     func resetVariables() {
         self.email = ""
+        self.username = ""
         self.password = ""
         self.secondPassword = ""
-        self.selection = .login
+        self.showPassword = false
+        self.showSecondPassword = false
     }
 }
 
@@ -151,5 +181,9 @@ enum LoginOrSignUp {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+            .previewDisplayName("Light Mode")
+//        LoginView()
+//            .preferredColorScheme(.dark)
+//            .previewDisplayName("Dark Mode")
     }
 }
