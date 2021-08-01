@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct UpdateAccountView: View {
+    @State private var universityName = ""
+    
+    
     var body: some View {
         VStack {
             
             /* _begin header */
+            Spacer()
             Text("Setup Account")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
@@ -19,12 +23,17 @@ struct UpdateAccountView: View {
             
             Text("Setup your account with a few easy steps!")
                 .foregroundColor(Color(red: 0.55, green: 0.55, blue: 0.55, opacity: 1.0))
+                .padding()
             /* _end header */
             
             /* _begin form */
             
+            Spacer()
+            UserInputField(input: $universityName, title: "University Name", type: .other)
+                .padding(.bottom, 50.0)
             
-            TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            
+            UserInputField(input: $universityName, title: "Skills", type: .other)
             
             /* _end form */
             
@@ -42,7 +51,7 @@ struct UpdateAccountView: View {
                         .padding(.horizontal, 75.0)
                 }
                 .padding()
-                .background(Color(red: 0.32, green: 0.15, blue: 0.09, opacity: 1.0)) // colors aren't scaling correct from figma to swift
+                .background(Color("DarkBrown"))
                 .foregroundColor(.white)
                 .cornerRadius(8)
             })
