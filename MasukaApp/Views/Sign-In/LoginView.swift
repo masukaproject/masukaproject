@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var email = ""
-    @State var username = ""
-    @State var password = ""
-    @State var secondPassword = ""
-    @State var showPassword = false
-    @State var showSecondPassword = false
+    @State private var email = ""
+    @State private var username = ""
+    @State private var password = ""
+    @State private var secondPassword = ""
+    @State private var showPassword = false
+    @State private var showSecondPassword = false
+    @State private var errorMessage = ""
+    @State private var checked = false
     
-    @State var selection: LoginOrSignUp = .login
+    @State private var selection: LoginOrSignUp = .login
     
     var body: some View {
         NavigationView {
@@ -24,7 +26,7 @@ struct LoginView: View {
                 // MARK: - Background Colour
                 Color("Beige")
                 
-                VStack(spacing: 15) {
+                VStack(spacing: 10) {
                     
                     // MARK: - Main Image & Title
                     ZStack (alignment: .bottom) {
@@ -65,7 +67,7 @@ struct LoginView: View {
                             Capsule()
                                 .foregroundColor(self.selection == .signup ? Color.white: Color.clear)
                                 .frame(width: self.selection == .signup ? Constants.screenWidth/2 : Constants.screenWidth/3, height: 50)
-
+                            
                             Text("Sign-Up")
                                 .foregroundColor(self.selection == .signup ? .black: .white)
                                 .fontWeight(.bold)
@@ -75,82 +77,83 @@ struct LoginView: View {
                                 self.selection = .signup
                             }
                         }
-
+                        
                     }
                     .background(Color.black.opacity(0.3))
                     .overlay(
                         Capsule()   // outline around tabs
                             .stroke(Color("DarkBrown"), style: StrokeStyle(lineWidth: 0.5)))
                     .clipShape(Capsule())
-                    .padding(.top, 25)
-                    .padding(.horizontal)
                     .onChange(of: selection) { _ in
                         // reset info when user changes from login to signup and vice versa
                         resetVariables()
                     }
+                    .padding(.bottom, 10)
                     
                     
                     // MARK: - Email
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor(Color(.lightGray))
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color("DarkBrown"), style: StrokeStyle(lineWidth: 0.5))
-                        HStack(spacing: 15) {
-                            Image(systemName: "envelope")
-                                .foregroundColor(.black.opacity(0.9))
-                            TextField("Email", text: self.$email)
-                                .disableAutocorrection(true)
-                                .autocapitalization(.none)
-                                .keyboardType(.emailAddress)
-                        }
-                        .padding()
+                    if selection == .signup {
+                        UserInputField(input: $email, title: "Email Address", type: .email)
                     }
-                    .frame(width: 370, height: 60)
                     
                     
                     // MARK: - Username
-                    if selection == .signup {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 20)
-                                .foregroundColor(Color(.lightGray))
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color("DarkBrown"), style: StrokeStyle(lineWidth: 0.5))
-                            HStack(spacing: 15) {
-                                Image(systemName: "person")
-                                    .foregroundColor(.black.opacity(0.9))
-                                TextField("Username", text: self.$username)
-                                    .disableAutocorrection(true)
-                                    .autocapitalization(.none)
-                            }
-                            .padding()
-                        }
-                        .frame(width: 370, height: 60)
-                    }
+                    UserInputField(input: $username, title: "Username", type: .other)
+                    
                     
                     // MARK: - Password
-                    PasswordBox(password: $password, showPassword: $showPassword, defaultText: "Password")
+                    UserInputField(input: $password, title: "Password", type: .password)
                     
                     
                     // MARK: - Second Password
                     if selection == .signup {
-                        PasswordBox(password: $secondPassword, showPassword: $showSecondPassword, defaultText: "Re-Enter Password")
+                        UserInputField(input: $secondPassword, title: "Confirm Password", type: .password)
                     }
+                    
+                    
+                    // MARK: - Error Message
+                    ZStack {
+                        if errorMessage != "" {
+                            Text(errorMessage)
+                                .foregroundColor(.red)
+                                .multilineTextAlignment(.center)
+                        }
+                    }
+                    .frame(width: 350, height: 43) // 43 is minimum height for 2 lines at this font size
                     
                     
                     // MARK: - Forgot Password
-                    if selection == .login {
+                    if selection == .login {    // only for login
                         NavigationLink(destination: ForgotPasswordView()) {
                             Text("Forgot Password?")
+                                .bold()
+                                .frame(width: 350, alignment: .leading)
                         }
                     }
-                    
+                    else {                      // only for signup
+                        
+                        // MARK: - Terms and Conditions
+                        HStack (spacing: 0) {
+                            Image(systemName: checked ? "checkmark.square.fill" : "square")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .onTapGesture {
+                                    checked.toggle()
+                                }
+                                .padding(.trailing, 7)
+                            Text("I agree with our ")
+                            Text("Terms and Conditions")
+                                .bold()
+                        }
+                        .font(.subheadline)
+                        .frame(width: 350, alignment: .leading)
+                    }
                     
                     // MARK: - Login Button
                     NavigationLink(destination: TabsView()) {
                         LargeButton(text: selection == .login ? "Login" : "Continue")
+                            .padding(.top, selection == .login ? 40 : 10)
                     }
-                    .padding(.top, 60)
                 }
                 .ignoresSafeArea()
             }
@@ -168,22 +171,23 @@ struct LoginView: View {
         self.username = ""
         self.password = ""
         self.secondPassword = ""
+        self.errorMessage = ""
         self.showPassword = false
         self.showSecondPassword = false
+        self.checked = false
     }
 }
 
 enum LoginOrSignUp {
-    case login
-    case signup
+    case login, signup
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
             .previewDisplayName("Light Mode")
-//        LoginView()
-//            .preferredColorScheme(.dark)
-//            .previewDisplayName("Dark Mode")
+        //        LoginView()
+        //            .preferredColorScheme(.dark)
+        //            .previewDisplayName("Dark Mode")
     }
 }

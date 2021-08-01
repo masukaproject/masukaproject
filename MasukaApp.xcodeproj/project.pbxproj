@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		008C7C4326B3C36D0036110F /* PasswordBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C7C4226B3C36D0036110F /* PasswordBox.swift */; };
+		008C7C4326B3C36D0036110F /* UserInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C7C4226B3C36D0036110F /* UserInputField.swift */; };
 		008C7C4526B3CDA70036110F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C7C4426B3CDA70036110F /* Constants.swift */; };
 		00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227DF26AE569100E5E39D /* MasukaApp.swift */; };
 		00E227E226AE569100E5E39D /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227E126AE569100E5E39D /* TabsView.swift */; };
@@ -24,10 +24,11 @@
 		00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280926AE6FA800E5E39D /* ProjectListView.swift */; };
 		00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */; };
 		00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521A626B5281E00723DC0 /* LargeButton.swift */; };
+		00E521AB26B66EB000723DC0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AA26B66EB000723DC0 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		008C7C4226B3C36D0036110F /* PasswordBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordBox.swift; sourceTree = "<group>"; };
+		008C7C4226B3C36D0036110F /* UserInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputField.swift; sourceTree = "<group>"; };
 		008C7C4426B3CDA70036110F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00E227DC26AE569100E5E39D /* MasukaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasukaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E227DF26AE569100E5E39D /* MasukaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasukaApp.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		00E2280926AE6FA800E5E39D /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		00E521A626B5281E00723DC0 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
+		00E521AA26B66EB000723DC0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				00E227F426AE637D00E5E39D /* LoginView.swift */,
-				008C7C4226B3C36D0036110F /* PasswordBox.swift */,
+				00E521AA26B66EB000723DC0 /* CustomTextField.swift */,
 				00E227F726AE63F500E5E39D /* SignUpView.swift */,
 				00E227F926AE640800E5E39D /* UpdateAccountView.swift */,
 				00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */,
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				00E521A626B5281E00723DC0 /* LargeButton.swift */,
+				008C7C4226B3C36D0036110F /* UserInputField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -252,10 +255,11 @@
 				00E227FA26AE640800E5E39D /* UpdateAccountView.swift in Sources */,
 				00E2280626AE673E00E5E39D /* ProfileView.swift in Sources */,
 				00E2280226AE672600E5E39D /* HomeView.swift in Sources */,
-				008C7C4326B3C36D0036110F /* PasswordBox.swift in Sources */,
+				008C7C4326B3C36D0036110F /* UserInputField.swift in Sources */,
 				00E227F526AE637D00E5E39D /* LoginView.swift in Sources */,
 				00E227F826AE63F500E5E39D /* SignUpView.swift in Sources */,
 				00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */,
+				00E521AB26B66EB000723DC0 /* CustomTextField.swift in Sources */,
 				00E2280826AE674400E5E39D /* SettingsView.swift in Sources */,
 				00E2280426AE673500E5E39D /* SearchView.swift in Sources */,
 				00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */,
