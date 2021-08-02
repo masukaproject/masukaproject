@@ -17,6 +17,8 @@ struct LoginView: View {
     @State private var errorMessage = ""
     @State private var checked = false
     
+    @State private var termsAndConditions = false
+    @State private var inForgotPassword = false
     @State private var selection: LoginOrSignUp = .login
     
     var body: some View {
@@ -102,12 +104,12 @@ struct LoginView: View {
                     
                     
                     // MARK: - Password
-                    UserInputField(input: $password, title: "Password", type: .password)
+                    UserInputField(input: $password, showPass: $showPassword, title: "Password", type: .password)
                     
                     
                     // MARK: - Second Password
                     if selection == .signup {
-                        UserInputField(input: $secondPassword, title: "Confirm Password", type: .password)
+                        UserInputField(input: $secondPassword, showPass: $showSecondPassword, title: "Confirm Password", type: .password)
                     }
                     
                     
@@ -124,7 +126,7 @@ struct LoginView: View {
                     
                     // MARK: - Forgot Password
                     if selection == .login {    // only for login
-                        NavigationLink(destination: ForgotPasswordView()) {
+                        NavigationLink(destination: ForgotPasswordView(isInView: $inForgotPassword), isActive: $inForgotPassword) {
                             Text("Forgot Password?")
                                 .bold()
                                 .frame(width: 350, alignment: .leading)
@@ -144,6 +146,12 @@ struct LoginView: View {
                             Text("I agree with our ")
                             Text("Terms and Conditions")
                                 .bold()
+                                .onTapGesture {
+                                    termsAndConditions = true
+                                }
+                                .sheet(isPresented: $termsAndConditions) {
+                                    TermsAndConditions(isShowing: $termsAndConditions)
+                                }
                         }
                         .font(.subheadline)
                         .frame(width: 350, alignment: .leading)
@@ -174,6 +182,7 @@ struct LoginView: View {
         self.errorMessage = ""
         self.showPassword = false
         self.showSecondPassword = false
+        self.inForgotPassword = false
         self.checked = false
     }
 }

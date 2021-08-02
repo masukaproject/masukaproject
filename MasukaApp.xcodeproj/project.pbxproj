@@ -14,7 +14,6 @@
 		00E227E426AE569300E5E39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E227E326AE569300E5E39D /* Assets.xcassets */; };
 		00E227E726AE569300E5E39D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E227E626AE569300E5E39D /* Preview Assets.xcassets */; };
 		00E227F526AE637D00E5E39D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227F426AE637D00E5E39D /* LoginView.swift */; };
-		00E227F826AE63F500E5E39D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227F726AE63F500E5E39D /* SignUpView.swift */; };
 		00E227FA26AE640800E5E39D /* UpdateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227F926AE640800E5E39D /* UpdateAccountView.swift */; };
 		00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */; };
 		00E2280226AE672600E5E39D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280126AE672600E5E39D /* HomeView.swift */; };
@@ -25,6 +24,7 @@
 		00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */; };
 		00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521A626B5281E00723DC0 /* LargeButton.swift */; };
 		00E521AB26B66EB000723DC0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AA26B66EB000723DC0 /* CustomTextField.swift */; };
+		00E521AD26B7938100723DC0 /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AC26B7938100723DC0 /* TermsAndConditions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,6 @@
 		00E227E626AE569300E5E39D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00E227E826AE569300E5E39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E227F426AE637D00E5E39D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		00E227F726AE63F500E5E39D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		00E227F926AE640800E5E39D /* UpdateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountView.swift; sourceTree = "<group>"; };
 		00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		00E2280126AE672600E5E39D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		00E521A626B5281E00723DC0 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		00E521AA26B66EB000723DC0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		00E521AC26B7938100723DC0 /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,10 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				00E227F426AE637D00E5E39D /* LoginView.swift */,
-				00E521AA26B66EB000723DC0 /* CustomTextField.swift */,
-				00E227F726AE63F500E5E39D /* SignUpView.swift */,
-				00E227F926AE640800E5E39D /* UpdateAccountView.swift */,
 				00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */,
+				00E227F926AE640800E5E39D /* UpdateAccountView.swift */,
+				00E521AC26B7938100723DC0 /* TermsAndConditions.swift */,
 			);
 			path = "Sign-In";
 			sourceTree = "<group>";
@@ -179,6 +178,7 @@
 			children = (
 				00E521A626B5281E00723DC0 /* LargeButton.swift */,
 				008C7C4226B3C36D0036110F /* UserInputField.swift */,
+				00E521AA26B66EB000723DC0 /* CustomTextField.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -257,13 +257,13 @@
 				00E2280226AE672600E5E39D /* HomeView.swift in Sources */,
 				008C7C4326B3C36D0036110F /* UserInputField.swift in Sources */,
 				00E227F526AE637D00E5E39D /* LoginView.swift in Sources */,
-				00E227F826AE63F500E5E39D /* SignUpView.swift in Sources */,
 				00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */,
 				00E521AB26B66EB000723DC0 /* CustomTextField.swift in Sources */,
 				00E2280826AE674400E5E39D /* SettingsView.swift in Sources */,
 				00E2280426AE673500E5E39D /* SearchView.swift in Sources */,
 				00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */,
 				00E227E226AE569100E5E39D /* TabsView.swift in Sources */,
+				00E521AD26B7938100723DC0 /* TermsAndConditions.swift in Sources */,
 				00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */,
 				008C7C4526B3CDA70036110F /* Constants.swift in Sources */,
 				00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */,
