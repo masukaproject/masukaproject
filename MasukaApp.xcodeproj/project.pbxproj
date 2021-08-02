@@ -25,6 +25,10 @@
 		00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521A626B5281E00723DC0 /* LargeButton.swift */; };
 		00E521AB26B66EB000723DC0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AA26B66EB000723DC0 /* CustomTextField.swift */; };
 		00E521AD26B7938100723DC0 /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AC26B7938100723DC0 /* TermsAndConditions.swift */; };
+		00E521AF26B79D8500723DC0 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AE26B79D8500723DC0 /* ProjectModel.swift */; };
+		00E521B126B79DE900723DC0 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521B026B79DE900723DC0 /* Project.swift */; };
+		00E521B326B79E2B00723DC0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521B226B79E2B00723DC0 /* User.swift */; };
+		00E521B526B7A5D400723DC0 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521B426B7A5D400723DC0 /* StartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		00E521A626B5281E00723DC0 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		00E521AA26B66EB000723DC0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		00E521AC26B7938100723DC0 /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
+		00E521AE26B79D8500723DC0 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		00E521B026B79DE900723DC0 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		00E521B226B79E2B00723DC0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		00E521B426B7A5D400723DC0 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				00E227DF26AE569100E5E39D /* MasukaApp.swift */,
+				00E227F026AE5A0000E5E39D /* Models */,
 				00E227F226AE5A0A00E5E39D /* ViewModels */,
 				00E227F126AE5A0800E5E39D /* Views */,
-				00E227F026AE5A0000E5E39D /* Models */,
 				00E227E326AE569300E5E39D /* Assets.xcassets */,
 				00E227E826AE569300E5E39D /* Info.plist */,
 				00E227E526AE569300E5E39D /* Preview Content */,
@@ -102,6 +110,8 @@
 		00E227F026AE5A0000E5E39D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				00E521B026B79DE900723DC0 /* Project.swift */,
+				00E521B226B79E2B00723DC0 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +119,7 @@
 		00E227F126AE5A0800E5E39D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				00E521B426B7A5D400723DC0 /* StartView.swift */,
 				00E227F626AE63E500E5E39D /* Sign-In */,
 				00E227E126AE569100E5E39D /* TabsView.swift */,
 				00E227F326AE5C6000E5E39D /* Home */,
@@ -124,6 +135,7 @@
 		00E227F226AE5A0A00E5E39D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				00E521AE26B79D8500723DC0 /* ProjectModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -259,15 +271,19 @@
 				00E227F526AE637D00E5E39D /* LoginView.swift in Sources */,
 				00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */,
 				00E521AB26B66EB000723DC0 /* CustomTextField.swift in Sources */,
+				00E521AF26B79D8500723DC0 /* ProjectModel.swift in Sources */,
 				00E2280826AE674400E5E39D /* SettingsView.swift in Sources */,
 				00E2280426AE673500E5E39D /* SearchView.swift in Sources */,
 				00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */,
+				00E521B526B7A5D400723DC0 /* StartView.swift in Sources */,
 				00E227E226AE569100E5E39D /* TabsView.swift in Sources */,
 				00E521AD26B7938100723DC0 /* TermsAndConditions.swift in Sources */,
 				00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */,
 				008C7C4526B3CDA70036110F /* Constants.swift in Sources */,
 				00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */,
 				00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */,
+				00E521B126B79DE900723DC0 /* Project.swift in Sources */,
+				00E521B326B79E2B00723DC0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

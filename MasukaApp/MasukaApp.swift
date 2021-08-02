@@ -11,7 +11,8 @@ import SwiftUI
 struct MasukaApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            StartView()
+                .environmentObject(ProjectModel())
         }
     }
 }

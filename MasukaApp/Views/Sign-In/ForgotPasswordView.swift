@@ -13,70 +13,131 @@ struct ForgotPasswordView: View {
     @State private var email = ""
     @State private var username = ""
     
+    @State private var resetType: ResetType = .username
+    
+    @State private var attempts: Int = 0 // for animation
+    
     let backArrow = "arrowshape.turn.up.left.fill"
     let lockIcon = "lock.circle.fill"
     
     var body: some View {
         
-        VStack (spacing: 25) {
+        ZStack {
+            // MARK: - Background Colour
+            Color("Beige")
+                .ignoresSafeArea()
             
-            ZStack {
-                Button(action: {
-                    isInView = false
-                }) {
-                    Image(systemName: backArrow)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 35, height: 22)
+            VStack (spacing: 25) {
+                
+                
+                // MARK: - Header
+                ZStack {
+                    Button(action: {
+                        isInView = false
+                    }) {
+                        Image(systemName: backArrow)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 35, height: 22)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading)
+                    
+                    Text("Password Reset")
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity, alignment: .center)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading)
+                .padding(.top)
                 
-                Text("Password Reset")
-                    .fontWeight(.semibold)
-                    .frame(maxWidth: .infinity, alignment: .center)
+                Spacer()
+                
+                
+                
+                // MARK: - Title
+                Group {
+                    Image(systemName: lockIcon)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 52, height: 52)
+                        .padding(.top, -30)
+                        .onTapGesture {
+                            withAnimation(.default) {
+                                attempts += 1
+                            }
+                        }
+                        .modifier(Shake(animatableData: CGFloat(attempts)))
+                    
+                    Text("Forgot Password")
+                        .font(.system(size: 38, weight: .bold))
+                }
+                
+                
+                // MARK: - Subtitle
+                Text("Enter your email address or username and we will send you a link to get back to your account.")
+                    .multilineTextAlignment(.center)
+                    .padding(40)
+                
+                
+                
+                // MARK: - Picker for Username/Email
+                Picker(selection: $resetType, label: Text("Select Choice")) {
+                    Text("Username").tag(ResetType.username)
+                    Text("Email").tag(ResetType.email)
+                }
+                .pickerStyle(DefaultPickerStyle())
+                .frame(width: 250, height: 80)
+                .onChange(of: resetType) { _ in
+                    email = ""
+                    username = ""
+                }
+                .padding(.top, -30)
+                
+                
+                // MARK: - Input Field
+                if resetType == .email {
+                    UserInputField(input: $email, title: "Email Address", type: .email)
+                } else {
+                    UserInputField(input: $username, title: "Username", type: .other)
+                }
+                
+                Spacer()
+                
+                
+                // MARK: - Continue Button
+                Button(action: {
+                    
+                }) {
+                    LargeButton(text: "Continue")
+                }
+                
+                Spacer()
             }
-            .padding(.top)
-            
-            Spacer()
-                
-            Group {
-                Image(systemName: lockIcon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 52, height: 52)
-                    .padding(.top, -30)
-                
-                Text("Forgot Password")
-                    .font(.system(size: 38, weight: .bold))
-            }
-            
-//            Spacer()
-            
-            Text("Enter your email address or username and we will send you a link to get back to your account.")
-                .multilineTextAlignment(.center)
-                .padding(40)
-            
-//            Spacer()
-            
-            Group {
-                UserInputField(input: $email, title: "Email Address", type: .email)
-                
-                UserInputField(input: $username, title: "Username", type: .other)
-            }
-            
-            Spacer()
-            
-            LargeButton(text: "Continue")
-            
-            Spacer()
+            .navigationBarHidden(true)
         }
-        .navigationBarHidden(true)
     }
     
 }
 
+enum ResetType {
+    case email, username
+}
 
+
+// Shake Animation for lock icon
+struct Shake: GeometryEffect {
+    var amount: CGFloat = 5
+    var shakesPerUnit = 3
+    var animatableData: CGFloat
+    
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        ProjectionTransform(
+            CGAffineTransform(
+                translationX: amount * sin(animatableData * .pi * CGFloat(shakesPerUnit)),
+                y: 0
+            )
+        )
+    }
+}
 
 struct ForgotPasswordView_Previews: PreviewProvider {
     static var previews: some View {

@@ -26,18 +26,24 @@ struct UserInputField: View {
         
         VStack (alignment: .leading) {
             Text(title)
-                .fontWeight(selected ? .semibold : .regular)
-                .opacity(selected ? 1 : 0.6)
+                .fontWeight(selected ? .medium : .regular)
+                .foregroundColor(selected ? .black : .gray)
                 .padding(.leading, 5)
+                .animation(.easeInOut(duration: 0.8), value: selected)
             
             HStack {
-                CustomTextField(text: $input, isRevealed: .constant((type == .password && !showPass) ? false : true), isFocused: $selected, isEmailAddress: .constant(type == .email ? true : false))
+                CustomTextField(
+                    text: $input,
+                    isRevealed: .constant((type == .password && !showPass) ? false : true),
+                    isFocused: $selected,
+                    isEmailAddress: .constant(type == .email ? true : false)
+                )
                 
                 if type == .password {
-                    Image(systemName: "eye")
+                    Image(systemName: showPass ? "eye.slash.fill" : "eye.fill")
                         .resizable()
-                        .scaledToFit()
-                        .frame(height: 16)
+                        .scaledToFill()
+                        .frame(width: 25, height: 16)
                         .foregroundColor(showPass ? .red : .gray)
                         .onTapGesture {
                             showPass.toggle()
@@ -47,6 +53,7 @@ struct UserInputField: View {
             
             HorizontalLine()
                 .stroke(Color.black.opacity(selected ? 1 : 0.6), lineWidth: selected ? 4 : 1)
+                .animation(.easeInOut(duration: 0.3), value: selected)
         }
         .frame(width: 350, height: 65)
         

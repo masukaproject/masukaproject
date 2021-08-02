@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var model: ProjectModel
+    
     @State private var email = ""
     @State private var username = ""
     @State private var password = ""
@@ -153,15 +155,24 @@ struct LoginView: View {
                                     TermsAndConditions(isShowing: $termsAndConditions)
                                 }
                         }
+                        .foregroundColor(.black)
                         .font(.subheadline)
                         .frame(width: 350, alignment: .leading)
                     }
                     
                     // MARK: - Login Button
-                    NavigationLink(destination: TabsView()) {
-                        LargeButton(text: selection == .login ? "Login" : "Continue")
-                            .padding(.top, selection == .login ? 40 : 10)
+                    Button(action: {
+                        if selection == .login {
+                            verifyLogin()
+                        } else {
+                            verifySignup()
+                        }
+                    }) {
+                        LargeButton(text: selection == .login ? "Login" : "Create Account")
                     }
+                    .padding(.top, selection == .login ? 40 : 10)
+                    
+                    
                 }
                 .ignoresSafeArea()
             }
@@ -184,6 +195,14 @@ struct LoginView: View {
         self.showSecondPassword = false
         self.inForgotPassword = false
         self.checked = false
+    }
+    
+    func verifyLogin() {
+        model.loggedIn = true
+    }
+    
+    func verifySignup() {
+        model.loggedIn = true
     }
 }
 
