@@ -8,58 +8,139 @@
 import SwiftUI
 
 struct ForgotPasswordView: View {
+    @Binding var isInView: Bool
+    
+    @State private var email = ""
+    @State private var username = ""
+    
+    @State private var resetType: ResetType = .username
+    
+    @State private var attempts: Int = 0 // for animation
+    
+    let backArrow = "arrowshape.turn.up.left.fill"
+    let lockIcon = "lock.circle.fill"
+    
     var body: some View {
         
-        VStack(spacing: 5) {
+        ZStack {
+            // MARK: - Background Colour
+            Color("Beige")
+                .ignoresSafeArea()
             
-            Text("Password Reset").bold().font(.system(size: 20, weight: .medium))
-            
-            Image(systemName: "lock.circle.fill")
+            VStack (spacing: 25) {
                 
-                .foregroundColor(.black.opacity(1)).padding(.all, 20.0)
-                .cornerRadius(8).font(.system(size: 60)).offset(y: 30)
-            
-            Image(systemName: "arrowshape.turn.up.left.fill")
-              .foregroundColor(.black.opacity(1))
-                .cornerRadius(8).font(.system(size: 20)).offset(x: -175, y: -142)
-        
-            Text("Forgot Password").bold().font(.system(size: 32, weight: .medium)).offset(y: 20)
-            
-            
-            Text("Enter your email address or username and we will send you a link to get back to your account.").font(.system(size: 17, weight: .light)).offset(y: 35).padding(.horizontal, 40).multilineTextAlignment(.center).padding()
-            
-        Spacer()
-            
-            Text("Email Address").font(.system(size: 15, weight: .light)).multilineTextAlignment(.leading).offset(x: -125, y: -100).padding(.horizontal, 35).padding()
-            
-        
-            Text("Username").font(.system(size: 15, weight: .light)).multilineTextAlignment(.leading).offset(x: -138, y: -60).padding(.horizontal, 35).padding()
-        Spacer()
-        
-
-        Button(action: {}) {
-            Text("Continue")
-                .foregroundColor(.white)
-                .font(.system(size: 24, weight: .medium))
-        }.frame(maxWidth: .infinity)
-        .padding(.vertical, 20)
-        .background(Color(red: 0.12549019607843137, green: 0.058823529411764705, blue: 0.03529411764705882).opacity(1))
-        .cornerRadius(20)
-        .padding(.horizontal, 40)
-        .offset(y: -50)
-        
-        
-            
-            
+                
+                // MARK: - Header
+                ZStack {
+                    Button(action: {
+                        isInView = false
+                    }) {
+                        Image(systemName: backArrow)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 35, height: 22)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading)
+                    
+                    Text("Password Reset")
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+                .padding(.top)
+                
+                Spacer()
+                
+                
+                
+                // MARK: - Title
+                Group {
+                    Image(systemName: lockIcon)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 52, height: 52)
+                        .padding(.top, -30)
+                        .onTapGesture {
+                            withAnimation(.default) {
+                                attempts += 1
+                            }
+                        }
+                        .modifier(Shake(animatableData: CGFloat(attempts)))
+                    
+                    Text("Forgot Password")
+                        .font(.system(size: 38, weight: .bold))
+                }
+                
+                
+                // MARK: - Subtitle
+                Text("Enter your email address or username and we will send you a link to get back to your account.")
+                    .multilineTextAlignment(.center)
+                    .padding(40)
+                
+                
+                
+                // MARK: - Picker for Username/Email
+                Picker(selection: $resetType, label: Text("Select Choice")) {
+                    Text("Username").tag(ResetType.username)
+                    Text("Email").tag(ResetType.email)
+                }
+                .pickerStyle(DefaultPickerStyle())
+                .frame(width: 250, height: 80)
+                .onChange(of: resetType) { _ in
+                    email = ""
+                    username = ""
+                }
+                .padding(.top, -30)
+                
+                
+                // MARK: - Input Field
+                if resetType == .email {
+                    UserInputField(input: $email, title: "Email Address", type: .email)
+                } else {
+                    UserInputField(input: $username, title: "Username", type: .other)
+                }
+                
+                Spacer()
+                
+                
+                // MARK: - Continue Button
+                Button(action: {
+                    
+                }) {
+                    LargeButton(text: "Continue")
+                }
+                
+                Spacer()
+            }
+            .navigationBarHidden(true)
         }
-   }
+    }
     
 }
 
+enum ResetType {
+    case email, username
+}
 
+
+// Shake Animation for lock icon
+struct Shake: GeometryEffect {
+    var amount: CGFloat = 5
+    var shakesPerUnit = 3
+    var animatableData: CGFloat
+    
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        ProjectionTransform(
+            CGAffineTransform(
+                translationX: amount * sin(animatableData * .pi * CGFloat(shakesPerUnit)),
+                y: 0
+            )
+        )
+    }
+}
 
 struct ForgotPasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        ForgotPasswordView()
+        ForgotPasswordView(isInView: .constant(true))
     }
 }

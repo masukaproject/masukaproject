@@ -30,6 +30,7 @@ struct CustomTextField: UIViewRepresentable {
         uiView.autocorrectionType = .no
         uiView.autocapitalizationType = .none
         uiView.keyboardType = isEmailAddress ? .emailAddress : .default
+        uiView.textColor = .black
     }
 
     class Coordinator: NSObject, UITextFieldDelegate {

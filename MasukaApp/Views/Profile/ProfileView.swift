@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var model: ProjectModel
+    
     var body: some View {
-        Text("Profile View Here")
+        Button(action: {
+            model.loggedIn = false
+        }) {
+            Text("Log out")
+                .font(.system(size: 52, weight: .bold))
+        }
     }
 }
 
