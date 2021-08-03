@@ -15,7 +15,7 @@ struct StartView: View {
             TabsView()
         }
         else {
-            LoginView()
+            LoginAndSignupView()
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  TermsAndConditions.swift
+//  TermsAndConditionsView.swift
 //  MasukaApp
 //
 //  Created by Uthman Mohamed on 2021-08-01.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TermsAndConditions: View {
+struct TermsAndConditionsView: View {
     @Binding var isShowing: Bool
     
     var body: some View {
@@ -22,6 +22,6 @@ struct TermsAndConditions: View {
 
 struct TermsAndConditions_Previews: PreviewProvider {
     static var previews: some View {
-        TermsAndConditions(isShowing: .constant(true))
+        TermsAndConditionsView(isShowing: .constant(true))
     }
 }

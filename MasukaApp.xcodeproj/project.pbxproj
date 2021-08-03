@@ -13,7 +13,7 @@
 		00E227E226AE569100E5E39D /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227E126AE569100E5E39D /* TabsView.swift */; };
 		00E227E426AE569300E5E39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E227E326AE569300E5E39D /* Assets.xcassets */; };
 		00E227E726AE569300E5E39D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E227E626AE569300E5E39D /* Preview Assets.xcassets */; };
-		00E227F526AE637D00E5E39D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227F426AE637D00E5E39D /* LoginView.swift */; };
+		00E227F526AE637D00E5E39D /* LoginAndSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227F426AE637D00E5E39D /* LoginAndSignupView.swift */; };
 		00E227FA26AE640800E5E39D /* UpdateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227F926AE640800E5E39D /* UpdateAccountView.swift */; };
 		00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */; };
 		00E2280226AE672600E5E39D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280126AE672600E5E39D /* HomeView.swift */; };
@@ -24,11 +24,12 @@
 		00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */; };
 		00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521A626B5281E00723DC0 /* LargeButton.swift */; };
 		00E521AB26B66EB000723DC0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AA26B66EB000723DC0 /* CustomTextField.swift */; };
-		00E521AD26B7938100723DC0 /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AC26B7938100723DC0 /* TermsAndConditions.swift */; };
+		00E521AD26B7938100723DC0 /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AC26B7938100723DC0 /* TermsAndConditionsView.swift */; };
 		00E521AF26B79D8500723DC0 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AE26B79D8500723DC0 /* ProjectModel.swift */; };
 		00E521B126B79DE900723DC0 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521B026B79DE900723DC0 /* Project.swift */; };
 		00E521B326B79E2B00723DC0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521B226B79E2B00723DC0 /* User.swift */; };
 		00E521B526B7A5D400723DC0 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521B426B7A5D400723DC0 /* StartView.swift */; };
+		00E521B726B8F6EE00723DC0 /* CapsuleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521B626B8F6ED00723DC0 /* CapsuleTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,7 @@
 		00E227E326AE569300E5E39D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00E227E626AE569300E5E39D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00E227E826AE569300E5E39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E227F426AE637D00E5E39D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		00E227F426AE637D00E5E39D /* LoginAndSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndSignupView.swift; sourceTree = "<group>"; };
 		00E227F926AE640800E5E39D /* UpdateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountView.swift; sourceTree = "<group>"; };
 		00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		00E2280126AE672600E5E39D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -51,11 +52,12 @@
 		00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		00E521A626B5281E00723DC0 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		00E521AA26B66EB000723DC0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		00E521AC26B7938100723DC0 /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
+		00E521AC26B7938100723DC0 /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
 		00E521AE26B79D8500723DC0 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		00E521B026B79DE900723DC0 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		00E521B226B79E2B00723DC0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		00E521B426B7A5D400723DC0 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		00E521B626B8F6ED00723DC0 /* CapsuleTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,10 +155,11 @@
 		00E227F626AE63E500E5E39D /* Sign-In */ = {
 			isa = PBXGroup;
 			children = (
-				00E227F426AE637D00E5E39D /* LoginView.swift */,
+				00E227F426AE637D00E5E39D /* LoginAndSignupView.swift */,
 				00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */,
 				00E227F926AE640800E5E39D /* UpdateAccountView.swift */,
-				00E521AC26B7938100723DC0 /* TermsAndConditions.swift */,
+				00E521AC26B7938100723DC0 /* TermsAndConditionsView.swift */,
+				00E521B626B8F6ED00723DC0 /* CapsuleTab.swift */,
 			);
 			path = "Sign-In";
 			sourceTree = "<group>";
@@ -268,16 +271,17 @@
 				00E2280626AE673E00E5E39D /* ProfileView.swift in Sources */,
 				00E2280226AE672600E5E39D /* HomeView.swift in Sources */,
 				008C7C4326B3C36D0036110F /* UserInputField.swift in Sources */,
-				00E227F526AE637D00E5E39D /* LoginView.swift in Sources */,
+				00E227F526AE637D00E5E39D /* LoginAndSignupView.swift in Sources */,
 				00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */,
 				00E521AB26B66EB000723DC0 /* CustomTextField.swift in Sources */,
 				00E521AF26B79D8500723DC0 /* ProjectModel.swift in Sources */,
+				00E521B726B8F6EE00723DC0 /* CapsuleTab.swift in Sources */,
 				00E2280826AE674400E5E39D /* SettingsView.swift in Sources */,
 				00E2280426AE673500E5E39D /* SearchView.swift in Sources */,
 				00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */,
 				00E521B526B7A5D400723DC0 /* StartView.swift in Sources */,
 				00E227E226AE569100E5E39D /* TabsView.swift in Sources */,
-				00E521AD26B7938100723DC0 /* TermsAndConditions.swift in Sources */,
+				00E521AD26B7938100723DC0 /* TermsAndConditionsView.swift in Sources */,
 				00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */,
 				008C7C4526B3CDA70036110F /* Constants.swift in Sources */,
 				00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */,

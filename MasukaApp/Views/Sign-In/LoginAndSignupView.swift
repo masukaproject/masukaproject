@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct LoginAndSignupView: View {
     @EnvironmentObject var model: ProjectModel
     
     @State private var email = ""
@@ -25,7 +25,7 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView {
-            ZStack{
+            ZStack {
                 
                 // MARK: - Background Colour
                 Color("Beige")
@@ -48,39 +48,13 @@ struct LoginView: View {
                     
                     
                     // MARK: - Login & Sign-Up Tabs
-                    HStack{
+                    HStack {
                         
                         // Login Tab
-                        ZStack {
-                            Capsule()
-                                .foregroundColor(self.selection == .login ? Color.white: Color.clear)
-                                .frame(width: self.selection == .login ? Constants.screenWidth/2 : Constants.screenWidth/3, height: 50)
-                            
-                            Text("Login")
-                                .foregroundColor(self.selection == .login ? .black: .white)
-                                .fontWeight(.bold)
-                        }
-                        .onTapGesture {
-                            withAnimation(.spring(response: 0.8, dampingFraction: 0.5, blendDuration: 0.5)) {
-                                self.selection = .login
-                            }
-                        }
+                        CapsuleTab(text: "Login", selection: $selection, current: .login)
                         
                         // Sign-Up Tab
-                        ZStack {
-                            Capsule()
-                                .foregroundColor(self.selection == .signup ? Color.white: Color.clear)
-                                .frame(width: self.selection == .signup ? Constants.screenWidth/2 : Constants.screenWidth/3, height: 50)
-                            
-                            Text("Sign-Up")
-                                .foregroundColor(self.selection == .signup ? .black: .white)
-                                .fontWeight(.bold)
-                        }
-                        .onTapGesture {
-                            withAnimation(.spring(response: 0.8, dampingFraction: 0.5, blendDuration: 0.5)) {
-                                self.selection = .signup
-                            }
-                        }
+                        CapsuleTab(text: "Sign-Up", selection: $selection, current: .signup)
                         
                     }
                     .background(Color.black.opacity(0.3))
@@ -127,16 +101,18 @@ struct LoginView: View {
                     
                     
                     // MARK: - Forgot Password
-                    if selection == .login {    // only for login
+                    if selection == .login {
                         NavigationLink(destination: ForgotPasswordView(isInView: $inForgotPassword), isActive: $inForgotPassword) {
                             Text("Forgot Password?")
                                 .bold()
                                 .frame(width: 350, alignment: .leading)
                         }
                     }
-                    else {                      // only for signup
+                    
+                    
+                    // MARK: - Terms and Conditions
+                    if selection == .signup {
                         
-                        // MARK: - Terms and Conditions
                         HStack (spacing: 0) {
                             Image(systemName: checked ? "checkmark.square.fill" : "square")
                                 .resizable()
@@ -152,19 +128,22 @@ struct LoginView: View {
                                     termsAndConditions = true
                                 }
                                 .sheet(isPresented: $termsAndConditions) {
-                                    TermsAndConditions(isShowing: $termsAndConditions)
+                                    TermsAndConditionsView(isShowing: $termsAndConditions)
                                 }
                         }
                         .foregroundColor(.black)
                         .font(.subheadline)
                         .frame(width: 350, alignment: .leading)
+                        
                     }
+                    
                     
                     // MARK: - Login Button
                     Button(action: {
                         if selection == .login {
                             verifyLogin()
-                        } else {
+                        }
+                        else {
                             verifySignup()
                         }
                     }) {
@@ -212,9 +191,9 @@ enum LoginOrSignUp {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginAndSignupView()
             .previewDisplayName("Light Mode")
-        //        LoginView()
+        //        LoginAndSignupView()
         //            .preferredColorScheme(.dark)
         //            .previewDisplayName("Dark Mode")
     }
