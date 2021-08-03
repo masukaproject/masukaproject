@@ -9,7 +9,11 @@ import SwiftUI
 
 struct SearchView: View {
     var body: some View {
-        Text("Search View Here")
+        VStack{
+            SearchTypeView()
+            SearchListView().padding(.bottom)
+            SearchOptionsView()
+        }
     }
 }
 
