@@ -8,34 +8,21 @@
 import SwiftUI
 
 struct SearchListView: View {
-    
-    private let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
-    
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(Color(red: 0.863, green: 0.863, blue: 0.875))
                 .cornerRadius(53)
-            VStack {
+            VStack (spacing: 8) {
                 Text("Found 25 Results")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .padding(.all, 50.0)
-                    
-                ScrollView(showsIndicators: false) {
-                    LazyVGrid(columns: gridItems) {
-                        ForEach(0..<4) { _ in
-                            NavigationLink(
-                                destination: Text("Destination")) {
-                                ProjectCardView()
-                            }
-                        }
-                    }
-                }
-            .padding(.horizontal, 25)
-                .padding(.vertical, -10)
+                    .padding(.top)
+                
+                ProjectListView()
             }
         }
+        .padding(.top)
     }
 }
 
