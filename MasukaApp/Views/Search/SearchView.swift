@@ -11,8 +11,8 @@ struct SearchView: View {
     var body: some View {
         VStack{
             SearchTypeView()
-            SearchListView().padding(.bottom)
-            SearchOptionsView()
+            SearchListView()
+//            SearchOptionsView()
         }
     }
 }

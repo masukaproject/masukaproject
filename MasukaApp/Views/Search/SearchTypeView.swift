@@ -11,14 +11,17 @@ struct SearchTypeView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(Color(red: 0.863, green: 0.863, blue: 0.875)).frame(width: 353, height: 58)
+                .fill(Color(red: 0.863, green: 0.863, blue: 0.875))
+                .frame(width: 353, height: 58)
                 .cornerRadius(30)
             HStack {
                 Image("magnifying_glass").imageScale(.small)
+                    .padding(.leading, 5)
                 Spacer()
-                TextField(/*@START_MENU_TOKEN@*/"Mobile Application"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                TextField("Search Projects", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                 
-            }.padding(.horizontal, 40.0)
+            }
+            .padding(.horizontal, 40.0)
         }
     }
 }

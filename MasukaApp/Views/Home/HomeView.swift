@@ -20,7 +20,9 @@ struct HomeView: View {
                                             Image(systemName: "text.alignleft")
                                                 .resizable()
                                                 .scaledToFill()
-                                                .frame(height: 22)
+                                                .padding(.top, 5)
+                                                .frame(width: 30, height: 22)
+                                                .clipped()
                                         }
                 )
         }

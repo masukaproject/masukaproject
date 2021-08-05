@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0055A5E126BBB2E900C7CB5D /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055A5E026BBB2E900C7CB5D /* StartView.swift */; };
+		0055A5E326BBB31400C7CB5D /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055A5E226BBB31400C7CB5D /* ProjectModel.swift */; };
+		0055A5E526BBB31F00C7CB5D /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055A5E426BBB31F00C7CB5D /* Project.swift */; };
+		0055A5E726BBB32600C7CB5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055A5E626BBB32600C7CB5D /* User.swift */; };
+		0055A5E926BBB33600C7CB5D /* CapsuleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055A5E826BBB33600C7CB5D /* CapsuleTab.swift */; };
+		0055A5EB26BBB35700C7CB5D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0055A5EA26BBB35700C7CB5D /* CustomTextField.swift */; };
 		008C7C4326B3C36D0036110F /* UserInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C7C4226B3C36D0036110F /* UserInputField.swift */; };
 		008C7C4526B3CDA70036110F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C7C4426B3CDA70036110F /* Constants.swift */; };
 		00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227DF26AE569100E5E39D /* MasukaApp.swift */; };
 		00E227E226AE569100E5E39D /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227E126AE569100E5E39D /* TabsView.swift */; };
 		00E227E426AE569300E5E39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E227E326AE569300E5E39D /* Assets.xcassets */; };
 		00E227E726AE569300E5E39D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E227E626AE569300E5E39D /* Preview Assets.xcassets */; };
-		00E227F526AE637D00E5E39D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227F426AE637D00E5E39D /* LoginView.swift */; };
-		00E227F826AE63F500E5E39D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227F726AE63F500E5E39D /* SignUpView.swift */; };
+		00E227F526AE637D00E5E39D /* LoginAndSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227F426AE637D00E5E39D /* LoginAndSignupView.swift */; };
 		00E227FA26AE640800E5E39D /* UpdateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227F926AE640800E5E39D /* UpdateAccountView.swift */; };
 		00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */; };
 		00E2280226AE672600E5E39D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280126AE672600E5E39D /* HomeView.swift */; };
@@ -24,13 +29,19 @@
 		00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280926AE6FA800E5E39D /* ProjectListView.swift */; };
 		00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */; };
 		00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521A626B5281E00723DC0 /* LargeButton.swift */; };
-		00E521AB26B66EB000723DC0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AA26B66EB000723DC0 /* CustomTextField.swift */; };
+		00E521AB26B66EB000723DC0 /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AA26B66EB000723DC0 /* TermsAndConditionsView.swift */; };
 		94A57E2B26B9049700A0317D /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2A26B9049700A0317D /* SearchListView.swift */; };
 		94A57E2D26B9083900A0317D /* SearchTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2C26B9083900A0317D /* SearchTypeView.swift */; };
 		94A57E2F26B9084F00A0317D /* SearchOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2E26B9084F00A0317D /* SearchOptionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0055A5E026BBB2E900C7CB5D /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		0055A5E226BBB31400C7CB5D /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		0055A5E426BBB31F00C7CB5D /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		0055A5E626BBB32600C7CB5D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0055A5E826BBB33600C7CB5D /* CapsuleTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapsuleTab.swift; sourceTree = "<group>"; };
+		0055A5EA26BBB35700C7CB5D /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		008C7C4226B3C36D0036110F /* UserInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputField.swift; sourceTree = "<group>"; };
 		008C7C4426B3CDA70036110F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00E227DC26AE569100E5E39D /* MasukaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasukaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,8 +50,7 @@
 		00E227E326AE569300E5E39D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00E227E626AE569300E5E39D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00E227E826AE569300E5E39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E227F426AE637D00E5E39D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		00E227F726AE63F500E5E39D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		00E227F426AE637D00E5E39D /* LoginAndSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndSignupView.swift; sourceTree = "<group>"; };
 		00E227F926AE640800E5E39D /* UpdateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountView.swift; sourceTree = "<group>"; };
 		00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		00E2280126AE672600E5E39D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -50,7 +60,7 @@
 		00E2280926AE6FA800E5E39D /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
 		00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		00E521A626B5281E00723DC0 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
-		00E521AA26B66EB000723DC0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		00E521AA26B66EB000723DC0 /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
 		94A57E2A26B9049700A0317D /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
 		94A57E2C26B9083900A0317D /* SearchTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTypeView.swift; sourceTree = "<group>"; };
 		94A57E2E26B9084F00A0317D /* SearchOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOptionsView.swift; sourceTree = "<group>"; };
@@ -88,8 +98,8 @@
 			children = (
 				00E227DF26AE569100E5E39D /* MasukaApp.swift */,
 				00E227F226AE5A0A00E5E39D /* ViewModels */,
-				00E227F126AE5A0800E5E39D /* Views */,
 				00E227F026AE5A0000E5E39D /* Models */,
+				00E227F126AE5A0800E5E39D /* Views */,
 				00E227E326AE569300E5E39D /* Assets.xcassets */,
 				00E227E826AE569300E5E39D /* Info.plist */,
 				00E227E526AE569300E5E39D /* Preview Content */,
@@ -108,6 +118,8 @@
 		00E227F026AE5A0000E5E39D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0055A5E626BBB32600C7CB5D /* User.swift */,
+				0055A5E426BBB31F00C7CB5D /* Project.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +127,7 @@
 		00E227F126AE5A0800E5E39D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0055A5E026BBB2E900C7CB5D /* StartView.swift */,
 				00E227F626AE63E500E5E39D /* Sign-In */,
 				00E227E126AE569100E5E39D /* TabsView.swift */,
 				00E227F326AE5C6000E5E39D /* Home */,
@@ -130,6 +143,7 @@
 		00E227F226AE5A0A00E5E39D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0055A5E226BBB31400C7CB5D /* ProjectModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -147,9 +161,9 @@
 		00E227F626AE63E500E5E39D /* Sign-In */ = {
 			isa = PBXGroup;
 			children = (
-				00E227F426AE637D00E5E39D /* LoginView.swift */,
-				00E521AA26B66EB000723DC0 /* CustomTextField.swift */,
-				00E227F726AE63F500E5E39D /* SignUpView.swift */,
+				0055A5E826BBB33600C7CB5D /* CapsuleTab.swift */,
+				00E227F426AE637D00E5E39D /* LoginAndSignupView.swift */,
+				00E521AA26B66EB000723DC0 /* TermsAndConditionsView.swift */,
 				00E227F926AE640800E5E39D /* UpdateAccountView.swift */,
 				00E227FB26AE641000E5E39D /* ForgotPasswordView.swift */,
 			);
@@ -186,6 +200,7 @@
 		00E521A526B527F800723DC0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0055A5EA26BBB35700C7CB5D /* CustomTextField.swift */,
 				00E521A626B5281E00723DC0 /* LargeButton.swift */,
 				008C7C4226B3C36D0036110F /* UserInputField.swift */,
 			);
@@ -263,15 +278,18 @@
 			files = (
 				00E227FA26AE640800E5E39D /* UpdateAccountView.swift in Sources */,
 				00E2280626AE673E00E5E39D /* ProfileView.swift in Sources */,
+				0055A5E326BBB31400C7CB5D /* ProjectModel.swift in Sources */,
 				00E2280226AE672600E5E39D /* HomeView.swift in Sources */,
 				94A57E2B26B9049700A0317D /* SearchListView.swift in Sources */,
 				008C7C4326B3C36D0036110F /* UserInputField.swift in Sources */,
 				94A57E2D26B9083900A0317D /* SearchTypeView.swift in Sources */,
-				00E227F526AE637D00E5E39D /* LoginView.swift in Sources */,
-				00E227F826AE63F500E5E39D /* SignUpView.swift in Sources */,
+				0055A5E526BBB31F00C7CB5D /* Project.swift in Sources */,
+				00E227F526AE637D00E5E39D /* LoginAndSignupView.swift in Sources */,
+				0055A5EB26BBB35700C7CB5D /* CustomTextField.swift in Sources */,
 				00E2280A26AE6FA800E5E39D /* ProjectListView.swift in Sources */,
 				94A57E2F26B9084F00A0317D /* SearchOptionsView.swift in Sources */,
-				00E521AB26B66EB000723DC0 /* CustomTextField.swift in Sources */,
+				00E521AB26B66EB000723DC0 /* TermsAndConditionsView.swift in Sources */,
+				0055A5E126BBB2E900C7CB5D /* StartView.swift in Sources */,
 				00E2280826AE674400E5E39D /* SettingsView.swift in Sources */,
 				00E2280426AE673500E5E39D /* SearchView.swift in Sources */,
 				00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */,
@@ -280,6 +298,8 @@
 				008C7C4526B3CDA70036110F /* Constants.swift in Sources */,
 				00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */,
 				00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */,
+				0055A5E726BBB32600C7CB5D /* User.swift in Sources */,
+				0055A5E926BBB33600C7CB5D /* CapsuleTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
