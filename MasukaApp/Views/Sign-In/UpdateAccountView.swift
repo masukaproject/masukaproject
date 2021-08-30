@@ -38,8 +38,43 @@ struct UpdateAccountView: View {
             /* _end form */
             
             
+            HStack {
+                Button(action: {
+                    print("works")
+                }, label: {
+                    Text("Coding")
+                        .padding(10)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.gray/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.black)
+                        .cornerRadius(12)
+                    .shadow(radius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/)
+                })
+                
+                Button(action: {
+                    print("works")
+                }, label: {
+                    Text("Web Design")
+                        .padding(10)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.gray/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.black)
+                        .cornerRadius(12)
+                    .shadow(radius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/)
+                })
+                
+                
+                Button(action: {
+                    print("works")
+                }, label: {
+                    Text("Academia")
+                        .padding(10)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.gray/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.black)
+                        .cornerRadius(12)
+                    .shadow(radius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/)
+                })
+                
+            }
             
-            /* _begin finish button */
             Spacer()
             
             Button(action: {
