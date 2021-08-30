@@ -30,10 +30,11 @@ struct UpdateAccountView: View {
             
             Spacer()
             UserInputField(input: $universityName, title: "University Name", type: .other)
-                .padding(.bottom, 50.0)
+                .padding(.bottom, 25.0)
             
             
             UserInputField(input: $universityName, title: "Skills", type: .other)
+                .padding(.bottom, 15)
             
             /* _end form */
             

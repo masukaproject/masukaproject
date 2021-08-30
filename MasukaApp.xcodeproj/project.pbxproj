@@ -30,9 +30,11 @@
 		00E2280C26AE6FB300E5E39D /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */; };
 		00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521A626B5281E00723DC0 /* LargeButton.swift */; };
 		00E521AB26B66EB000723DC0 /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E521AA26B66EB000723DC0 /* TermsAndConditionsView.swift */; };
+		4F84BEE726DD488300751D83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F84BEE626DD488300751D83 /* GoogleService-Info.plist */; };
 		94A57E2B26B9049700A0317D /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2A26B9049700A0317D /* SearchListView.swift */; };
 		94A57E2D26B9083900A0317D /* SearchTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2C26B9083900A0317D /* SearchTypeView.swift */; };
 		94A57E2F26B9084F00A0317D /* SearchOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2E26B9084F00A0317D /* SearchOptionsView.swift */; };
+		B9B66A5707745A680DEB8BE6 /* Pods_MasukaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAD34404F6C9931EB2745EF /* Pods_MasukaApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,9 +63,13 @@
 		00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		00E521A626B5281E00723DC0 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		00E521AA26B66EB000723DC0 /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
+		428563F8A61946306A8ABFD8 /* Pods-MasukaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasukaApp.release.xcconfig"; path = "Target Support Files/Pods-MasukaApp/Pods-MasukaApp.release.xcconfig"; sourceTree = "<group>"; };
+		4F84BEE626DD488300751D83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94A57E2A26B9049700A0317D /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
 		94A57E2C26B9083900A0317D /* SearchTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTypeView.swift; sourceTree = "<group>"; };
 		94A57E2E26B9084F00A0317D /* SearchOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOptionsView.swift; sourceTree = "<group>"; };
+		CCAD34404F6C9931EB2745EF /* Pods_MasukaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasukaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E336CDC40807AA04471673E9 /* Pods-MasukaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasukaApp.debug.xcconfig"; path = "Target Support Files/Pods-MasukaApp/Pods-MasukaApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B66A5707745A680DEB8BE6 /* Pods_MasukaApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,8 @@
 			children = (
 				00E227DE26AE569100E5E39D /* MasukaApp */,
 				00E227DD26AE569100E5E39D /* Products */,
+				4D297AB3C2C56D0B6603C0CC /* Pods */,
+				6E2C8BF9A70BE5B7AC797C9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +105,7 @@
 		00E227DE26AE569100E5E39D /* MasukaApp */ = {
 			isa = PBXGroup;
 			children = (
+				4F84BEE626DD488300751D83 /* GoogleService-Info.plist */,
 				00E227DF26AE569100E5E39D /* MasukaApp.swift */,
 				00E227F226AE5A0A00E5E39D /* ViewModels */,
 				00E227F026AE5A0000E5E39D /* Models */,
@@ -207,6 +217,24 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		4D297AB3C2C56D0B6603C0CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E336CDC40807AA04471673E9 /* Pods-MasukaApp.debug.xcconfig */,
+				428563F8A61946306A8ABFD8 /* Pods-MasukaApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6E2C8BF9A70BE5B7AC797C9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCAD34404F6C9931EB2745EF /* Pods_MasukaApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E227EB26AE569300E5E39D /* Build configuration list for PBXNativeTarget "MasukaApp" */;
 			buildPhases = (
+				8A6ECF1B2DBAE7BC6A772ADD /* [CP] Check Pods Manifest.lock */,
 				00E227D826AE569100E5E39D /* Sources */,
 				00E227D926AE569100E5E39D /* Frameworks */,
 				00E227DA26AE569100E5E39D /* Resources */,
+				97CBCE9301B4C7FE435DF022 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,10 +296,53 @@
 			files = (
 				00E227E726AE569300E5E39D /* Preview Assets.xcassets in Resources */,
 				00E227E426AE569300E5E39D /* Assets.xcassets in Resources */,
+				4F84BEE726DD488300751D83 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8A6ECF1B2DBAE7BC6A772ADD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MasukaApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97CBCE9301B4C7FE435DF022 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MasukaApp/Pods-MasukaApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MasukaApp/Pods-MasukaApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MasukaApp/Pods-MasukaApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00E227D826AE569100E5E39D /* Sources */ = {
@@ -424,6 +497,7 @@
 		};
 		00E227EC26AE569300E5E39D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E336CDC40807AA04471673E9 /* Pods-MasukaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,6 +520,7 @@
 		};
 		00E227ED26AE569300E5E39D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 428563F8A61946306A8ABFD8 /* Pods-MasukaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
