@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,7 @@
 		94A57E2B26B9049700A0317D /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2A26B9049700A0317D /* SearchListView.swift */; };
 		94A57E2D26B9083900A0317D /* SearchTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2C26B9083900A0317D /* SearchTypeView.swift */; };
 		94A57E2F26B9084F00A0317D /* SearchOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2E26B9084F00A0317D /* SearchOptionsView.swift */; };
+		9E8A445226DF2C7D00934239 /* Helper functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A445126DF2C7D00934239 /* Helper functions.swift */; };
 		B9B66A5707745A680DEB8BE6 /* Pods_MasukaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAD34404F6C9931EB2745EF /* Pods_MasukaApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		94A57E2A26B9049700A0317D /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
 		94A57E2C26B9083900A0317D /* SearchTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTypeView.swift; sourceTree = "<group>"; };
 		94A57E2E26B9084F00A0317D /* SearchOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOptionsView.swift; sourceTree = "<group>"; };
+		9E8A445126DF2C7D00934239 /* Helper functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper functions.swift"; sourceTree = "<group>"; };
 		CCAD34404F6C9931EB2745EF /* Pods_MasukaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasukaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E336CDC40807AA04471673E9 /* Pods-MasukaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasukaApp.debug.xcconfig"; path = "Target Support Files/Pods-MasukaApp/Pods-MasukaApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 		00E227DE26AE569100E5E39D /* MasukaApp */ = {
 			isa = PBXGroup;
 			children = (
+				9E8A445026DF2C5E00934239 /* Helpers */,
 				4F84BEE626DD488300751D83 /* GoogleService-Info.plist */,
 				00E227DF26AE569100E5E39D /* MasukaApp.swift */,
 				00E227F226AE5A0A00E5E39D /* ViewModels */,
@@ -223,7 +226,6 @@
 				E336CDC40807AA04471673E9 /* Pods-MasukaApp.debug.xcconfig */,
 				428563F8A61946306A8ABFD8 /* Pods-MasukaApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -233,6 +235,14 @@
 				CCAD34404F6C9931EB2745EF /* Pods_MasukaApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E8A445026DF2C5E00934239 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9E8A445126DF2C7D00934239 /* Helper functions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +379,7 @@
 				00E227E226AE569100E5E39D /* TabsView.swift in Sources */,
 				00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */,
 				008C7C4526B3CDA70036110F /* Constants.swift in Sources */,
+				9E8A445226DF2C7D00934239 /* Helper functions.swift in Sources */,
 				00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */,
 				00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */,
 				0055A5E726BBB32600C7CB5D /* User.swift in Sources */,

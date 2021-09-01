@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseFirestore
 
 struct LoginAndSignupView: View {
     @EnvironmentObject var model: ProjectModel
@@ -177,11 +179,71 @@ struct LoginAndSignupView: View {
     }
     
     func verifyLogin() {
-        model.loggedIn = true
+        // Check that nothing is empty
+        if self.username.isEmpty || self.password.isEmpty {
+            model.loggedIn = false
+            self.errorMessage = "Please fill in all fields"
+            return
+        }
+        Auth.auth().signIn(withEmail: self.username, password: self.password) { result, error in
+            if error != nil {
+                // Coundn't sign into the account.
+                model.loggedIn = false
+                self.errorMessage = "This user does not exist, please try a different account."
+                return
+            }
+            else {
+                model.loggedIn = true
+            }
+        }
     }
+        
     
     func verifySignup() {
+        model.loggedIn = false
+        // Check that nothing is empty
+        let new_username = self.username.trimmingCharacters(in: .whitespacesAndNewlines)
+        let new_password = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
+        let new_secondpassword = self.secondPassword.trimmingCharacters(in: .whitespacesAndNewlines)
+        let new_email = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
+        if new_username == "" || new_password == "" ||  new_secondpassword == "" || new_email == "" {
+            self.errorMessage = "Please fill in all fields"
+            return
+        }
+        // Checks if password passes all criteria
+        if Helpers.passwordCheck(new_password) == false || self.password != new_password {
+            self.errorMessage = "Password cannot contain spaces and must contain at least 8 characters, a special character and a number."
+            return
+        }
+        // Checks if email is valid
+        if Helpers.emailCheck(new_email) == false {
+            self.errorMessage = "Please make sure that the given email is valid."
+            return
+        }
+        // Checks if password is equal to second password
+        if self.password != self.secondPassword {
+            self.errorMessage = "Please makes sure that the passwords given are the same."
+            return
+        }
+        
+        
+        // Create the user if all conditions pass and log him in
+        Auth.auth().createUser(withEmail: new_email, password: new_password) { result, error in
+            if error != nil {
+                // There was an error creating the user (temporary)
+                self.errorMessage = "Error while creating the user. Please try again later."
+            }
+            else {
+                // User was created, store username and UID
+                let db = Firestore.firestore()
+                
+                db.collection("users").addDocument(data: ["username": new_username, "uid": result!.user.uid])
+                
+            }
+        }
+        
         model.loggedIn = true
+        
     }
 }
 
