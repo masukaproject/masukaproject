@@ -72,14 +72,13 @@ struct LoginAndSignupView: View {
                     
                     
                     // MARK: - Email
-                    if selection == .signup {
-                        UserInputField(input: $email, title: "Email Address", type: .email)
-                    }
+                    UserInputField(input: $email, title: "Email Address", type: .email)
                     
                     
                     // MARK: - Username
-                    UserInputField(input: $username, title: "Username", type: .other)
-                    
+                    if selection == .signup {
+                        UserInputField(input: $username, title: "Username", type: .other)
+                    }
                     
                     // MARK: - Password
                     UserInputField(input: $password, showPass: $showPassword, title: "Password", type: .password)
@@ -180,16 +179,16 @@ struct LoginAndSignupView: View {
     
     func verifyLogin() {
         // Check that nothing is empty
-        if self.username.isEmpty || self.password.isEmpty {
+        if self.email.isEmpty || self.password.isEmpty {
             model.loggedIn = false
             self.errorMessage = "Please fill in all fields"
             return
         }
-        Auth.auth().signIn(withEmail: self.username, password: self.password) { result, error in
+        Auth.auth().signIn(withEmail: self.email, password: self.password) { result, error in
             if error != nil {
                 // Coundn't sign into the account.
                 model.loggedIn = false
-                self.errorMessage = "This user does not exist, please try a different account."
+                self.errorMessage = error!.localizedDescription
                 return
             }
             else {
@@ -212,7 +211,7 @@ struct LoginAndSignupView: View {
         }
         // Checks if password passes all criteria
         if Helpers.passwordCheck(new_password) == false || self.password != new_password {
-            self.errorMessage = "Password cannot contain spaces and must contain at least 8 characters, a special character and a number."
+            self.errorMessage = "Password must contain at least 8 characters, a special character and a number."
             return
         }
         // Checks if email is valid
@@ -228,7 +227,7 @@ struct LoginAndSignupView: View {
         
         
         // Create the user if all conditions pass and log him in
-        Auth.auth().createUser(withEmail: new_email, password: new_password) { result, error in
+        Auth.auth().createUser(withEmail: self.email, password: self.password) { result, error in
             if error != nil {
                 // There was an error creating the user (temporary)
                 self.errorMessage = "Error while creating the user. Please try again later."
@@ -237,7 +236,7 @@ struct LoginAndSignupView: View {
                 // User was created, store username and UID
                 let db = Firestore.firestore()
                 
-                db.collection("users").addDocument(data: ["username": new_username, "uid": result!.user.uid])
+                db.collection("users").addDocument(data: ["username": self.username, "uid": result!.user.uid])
                 
             }
         }
