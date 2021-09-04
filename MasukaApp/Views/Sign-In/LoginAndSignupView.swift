@@ -237,11 +237,10 @@ struct LoginAndSignupView: View {
                 let db = Firestore.firestore()
                 
                 db.collection("users").addDocument(data: ["username": self.username, "uid": result!.user.uid])
+                model.loggedIn = true
                 
             }
         }
-        
-        model.loggedIn = true
         
     }
 }
