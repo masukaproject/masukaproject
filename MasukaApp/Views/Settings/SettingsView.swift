@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var model: ProjectModel
+    
     var body: some View {
-        Text("Settings View Here")
+        Button(action: {
+            model.loggedIn = false
+        }) {
+            Text("LOGOUT")
+                .font(.system(size: 50))
+                .bold()
+        }
     }
 }
 
