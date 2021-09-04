@@ -96,17 +96,27 @@ struct ProfileView: View {
                 
                 Spacer()
                 
+                
+                
                 Button(action: {
                     print("hahaha")
                 }) {
                     ZStack{
                         
-                        Text("View Project").cornerRadius(7)
+                        Text("View Project")
+                            .foregroundColor(.white)
 
                     }
+                }
+                .frame(width: Constants.screenWidth - 40, height: 30)
+                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color("DarkBrown")/*@END_MENU_TOKEN@*/)
+                .cornerRadius(7)
+                
+                
+                
                 Spacer()
             }
-            .frame(width: Constants.screenWidth-15, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(width: Constants.screenWidth-15, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.white/*@END_MENU_TOKEN@*/)
             .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
 
