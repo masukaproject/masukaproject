@@ -17,6 +17,8 @@ class ProjectModel: ObservableObject {
     // Projects Info
     @Published var projects = [Project]()
     
+    @Published var currentView: SideMenuOptions = .home
+    
     func checkLogin() {
         self.loggedIn = Auth.auth().currentUser == nil ? false : true
     }

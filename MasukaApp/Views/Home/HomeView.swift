@@ -10,25 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     var body: some View {
-        NavigationView {
-            ProjectListView()
-                .navigationBarTitle("Suggested Projects")
-                .navigationBarItems(leading:
-                                        Button(action: {
-                                            
-                                        }) {
-                                            Image(systemName: "text.alignleft")
-                                                .resizable()
-                                                .scaledToFill()
-                                                .padding(.top, 5)
-                                                .frame(width: 30, height: 22)
-                                                .clipped()
-                                        }
-                )
-        }
-        .navigationBarHidden(true)
-        .navigationViewStyle(StackNavigationViewStyle())
-        
+        ProjectListView()
     }
 }
 

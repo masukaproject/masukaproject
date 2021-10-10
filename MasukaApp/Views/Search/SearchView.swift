@@ -11,7 +11,7 @@ struct SearchView: View {
     var body: some View {
         NavigationView {
             VStack{
-                SearchTypeView()
+                SearchBarView()
                     .navigationTitle("Search")
                     .navigationBarHidden(true)
                 SearchListView()

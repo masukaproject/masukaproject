@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchTypeView: View {
+struct SearchBarView: View {
     var body: some View {
         ZStack {
             Rectangle()
@@ -29,7 +29,7 @@ struct SearchTypeView: View {
 
 struct SearchTypeView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchTypeView()
+        SearchBarView()
     }
 }
 

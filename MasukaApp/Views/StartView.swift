@@ -12,7 +12,7 @@ struct StartView: View {
     
     var body: some View {
         if model.loggedIn {
-            TabsView()
+            SelectionView()
         }
         else {
             LoginAndSignupView()

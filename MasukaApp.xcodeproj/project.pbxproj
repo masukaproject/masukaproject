@@ -20,7 +20,10 @@
 		008C7C4526B3CDA70036110F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C7C4426B3CDA70036110F /* Constants.swift */; };
 		00CA18D827129F57004E7488 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA18D727129F57004E7488 /* ProjectDetailView.swift */; };
 		00CA18DA2712B064004E7488 /* MasukaLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA18D92712B064004E7488 /* MasukaLogo.swift */; };
-		00CA18DC2712B17B004E7488 /* SettingsOptionsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA18DB2712B17B004E7488 /* SettingsOptionsEnum.swift */; };
+		00CA18DE2712B86B004E7488 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA18DD2712B86B004E7488 /* SelectionView.swift */; };
+		00CA18E02712B952004E7488 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA18DF2712B952004E7488 /* SideMenuView.swift */; };
+		00CA18E22712BA9D004E7488 /* SideMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA18E12712BA9D004E7488 /* SideMenuOptions.swift */; };
+		00CA18E42712C1A3004E7488 /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA18E32712C1A3004E7488 /* SideMenuOptionView.swift */; };
 		00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227DF26AE569100E5E39D /* MasukaApp.swift */; };
 		00E227E226AE569100E5E39D /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227E126AE569100E5E39D /* TabsView.swift */; };
 		00E227E426AE569300E5E39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E227E326AE569300E5E39D /* Assets.xcassets */; };
@@ -39,7 +42,7 @@
 		4F84BEE726DD488300751D83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F84BEE626DD488300751D83 /* GoogleService-Info.plist */; };
 		9417954926E996CE002D6FB6 /* FrontPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9417954826E996CE002D6FB6 /* FrontPageView.swift */; };
 		94A57E2B26B9049700A0317D /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2A26B9049700A0317D /* SearchListView.swift */; };
-		94A57E2D26B9083900A0317D /* SearchTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2C26B9083900A0317D /* SearchTypeView.swift */; };
+		94A57E2D26B9083900A0317D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2C26B9083900A0317D /* SearchBarView.swift */; };
 		94A57E2F26B9084F00A0317D /* SearchOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57E2E26B9084F00A0317D /* SearchOptionsView.swift */; };
 		9E8A445226DF2C7D00934239 /* Helper functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A445126DF2C7D00934239 /* Helper functions.swift */; };
 		B9B66A5707745A680DEB8BE6 /* Pods_MasukaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAD34404F6C9931EB2745EF /* Pods_MasukaApp.framework */; };
@@ -59,7 +62,10 @@
 		008C7C4426B3CDA70036110F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00CA18D727129F57004E7488 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		00CA18D92712B064004E7488 /* MasukaLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasukaLogo.swift; sourceTree = "<group>"; };
-		00CA18DB2712B17B004E7488 /* SettingsOptionsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsEnum.swift; sourceTree = "<group>"; };
+		00CA18DD2712B86B004E7488 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		00CA18DF2712B952004E7488 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		00CA18E12712BA9D004E7488 /* SideMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptions.swift; sourceTree = "<group>"; };
+		00CA18E32712C1A3004E7488 /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
 		00E227DC26AE569100E5E39D /* MasukaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasukaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E227DF26AE569100E5E39D /* MasukaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasukaApp.swift; sourceTree = "<group>"; };
 		00E227E126AE569100E5E39D /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
@@ -81,7 +87,7 @@
 		4F84BEE626DD488300751D83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9417954826E996CE002D6FB6 /* FrontPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageView.swift; sourceTree = "<group>"; };
 		94A57E2A26B9049700A0317D /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
-		94A57E2C26B9083900A0317D /* SearchTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTypeView.swift; sourceTree = "<group>"; };
+		94A57E2C26B9083900A0317D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		94A57E2E26B9084F00A0317D /* SearchOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOptionsView.swift; sourceTree = "<group>"; };
 		9E8A445126DF2C7D00934239 /* Helper functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper functions.swift"; sourceTree = "<group>"; };
 		CCAD34404F6C9931EB2745EF /* Pods_MasukaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasukaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,14 +127,14 @@
 		00E227DE26AE569100E5E39D /* MasukaApp */ = {
 			isa = PBXGroup;
 			children = (
-				9E8A445026DF2C5E00934239 /* Helpers */,
-				4F84BEE626DD488300751D83 /* GoogleService-Info.plist */,
 				00E227DF26AE569100E5E39D /* MasukaApp.swift */,
+				9E8A445026DF2C5E00934239 /* Helpers */,
 				00E227F226AE5A0A00E5E39D /* ViewModels */,
 				00E227F026AE5A0000E5E39D /* Models */,
 				00E227F126AE5A0800E5E39D /* Views */,
 				00E227E326AE569300E5E39D /* Assets.xcassets */,
 				00E227E826AE569300E5E39D /* Info.plist */,
+				4F84BEE626DD488300751D83 /* GoogleService-Info.plist */,
 				00E227E526AE569300E5E39D /* Preview Content */,
 			);
 			path = MasukaApp;
@@ -155,8 +161,11 @@
 			isa = PBXGroup;
 			children = (
 				0055A5E026BBB2E900C7CB5D /* StartView.swift */,
-				00E227F626AE63E500E5E39D /* Sign-In */,
 				00E227E126AE569100E5E39D /* TabsView.swift */,
+				00CA18DD2712B86B004E7488 /* SelectionView.swift */,
+				00CA18DF2712B952004E7488 /* SideMenuView.swift */,
+				00CA18E32712C1A3004E7488 /* SideMenuOptionView.swift */,
+				00E227F626AE63E500E5E39D /* Sign-In */,
 				00E227F326AE5C6000E5E39D /* Home */,
 				00E227FE26AE66BC00E5E39D /* Search */,
 				00E2280026AE66C400E5E39D /* Profile */,
@@ -203,7 +212,7 @@
 			children = (
 				00E2280326AE673500E5E39D /* SearchView.swift */,
 				94A57E2A26B9049700A0317D /* SearchListView.swift */,
-				94A57E2C26B9083900A0317D /* SearchTypeView.swift */,
+				94A57E2C26B9083900A0317D /* SearchBarView.swift */,
 				94A57E2E26B9084F00A0317D /* SearchOptionsView.swift */,
 			);
 			path = Search;
@@ -213,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				00E2280726AE674400E5E39D /* SettingsView.swift */,
-				00CA18DB2712B17B004E7488 /* SettingsOptionsEnum.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -262,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				9E8A445126DF2C7D00934239 /* Helper functions.swift */,
+				00CA18E12712BA9D004E7488 /* SideMenuOptions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -382,13 +391,13 @@
 			files = (
 				9417954926E996CE002D6FB6 /* FrontPageView.swift in Sources */,
 				00E227FA26AE640800E5E39D /* UpdateAccountView.swift in Sources */,
+				00CA18E22712BA9D004E7488 /* SideMenuOptions.swift in Sources */,
 				00E2280626AE673E00E5E39D /* ProfileView.swift in Sources */,
 				0055A5E326BBB31400C7CB5D /* ProjectModel.swift in Sources */,
 				00E2280226AE672600E5E39D /* HomeView.swift in Sources */,
 				94A57E2B26B9049700A0317D /* SearchListView.swift in Sources */,
 				008C7C4326B3C36D0036110F /* UserInputField.swift in Sources */,
-				00CA18DC2712B17B004E7488 /* SettingsOptionsEnum.swift in Sources */,
-				94A57E2D26B9083900A0317D /* SearchTypeView.swift in Sources */,
+				94A57E2D26B9083900A0317D /* SearchBarView.swift in Sources */,
 				0055A5E526BBB31F00C7CB5D /* Project.swift in Sources */,
 				00E227F526AE637D00E5E39D /* LoginAndSignupView.swift in Sources */,
 				0055A5EB26BBB35700C7CB5D /* CustomTextField.swift in Sources */,
@@ -396,6 +405,8 @@
 				94A57E2F26B9084F00A0317D /* SearchOptionsView.swift in Sources */,
 				00E521AB26B66EB000723DC0 /* TermsAndConditionsView.swift in Sources */,
 				0055A5E126BBB2E900C7CB5D /* StartView.swift in Sources */,
+				00CA18E02712B952004E7488 /* SideMenuView.swift in Sources */,
+				00CA18DE2712B86B004E7488 /* SelectionView.swift in Sources */,
 				00767AA826E33F0200D4D9D4 /* UserHeaderView.swift in Sources */,
 				00767AA426E3198900D4D9D4 /* UserIconView.swift in Sources */,
 				00E2280826AE674400E5E39D /* SettingsView.swift in Sources */,
@@ -406,6 +417,7 @@
 				00E521A726B5281E00723DC0 /* LargeButton.swift in Sources */,
 				008C7C4526B3CDA70036110F /* Constants.swift in Sources */,
 				9E8A445226DF2C7D00934239 /* Helper functions.swift in Sources */,
+				00CA18E42712C1A3004E7488 /* SideMenuOptionView.swift in Sources */,
 				00CA18DA2712B064004E7488 /* MasukaLogo.swift in Sources */,
 				00E227FC26AE641000E5E39D /* ForgotPasswordView.swift in Sources */,
 				00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */,
