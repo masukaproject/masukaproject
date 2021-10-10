@@ -23,6 +23,7 @@ struct SearchTypeView: View {
             }
             .padding(.horizontal, 40.0)
         }
+        .padding(.top, 25)
     }
 }
 

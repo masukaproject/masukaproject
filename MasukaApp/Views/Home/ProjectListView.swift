@@ -16,7 +16,7 @@ struct ProjectListView: View {
             LazyVGrid(columns: gridItems) {
                 ForEach(0..<10) { _ in
                     NavigationLink(
-                        destination: Text("Destination")) {
+                        destination: ProjectDetailView()) {
                         ProjectCardView()
                     }
                 }

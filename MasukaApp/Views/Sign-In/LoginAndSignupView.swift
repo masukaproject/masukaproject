@@ -7,7 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
-import FirebaseFirestore
+import Firebase
 
 struct LoginAndSignupView: View {
     @EnvironmentObject var model: ProjectModel
@@ -178,69 +178,60 @@ struct LoginAndSignupView: View {
     }
     
     func verifyLogin() {
-        // Check that nothing is empty
-        if self.email.isEmpty || self.password.isEmpty {
-            model.loggedIn = false
-            self.errorMessage = "Please fill in all fields"
-            return
-        }
-        Auth.auth().signIn(withEmail: self.email, password: self.password) { result, error in
-            if error != nil {
-                // Coundn't sign into the account.
-                model.loggedIn = false
-                self.errorMessage = error!.localizedDescription
-                return
-            }
-            else {
-                model.loggedIn = true
-            }
-        }
+        model.loggedIn = true
+//        Auth.auth().signIn(withEmail: self.email, password: self.password) { result, error in
+//            if error != nil {
+//                // Coundn't sign into the account.
+//                model.loggedIn = false
+//                self.errorMessage = error!.localizedDescription
+//                return
+//            }
+//            else {
+//                model.loggedIn = true
+//            }
+//        }
+//
+//        // model.getUserData()
+//
+//        model.checkLogin()
     }
         
     
     func verifySignup() {
-        model.loggedIn = false
-        // Check that nothing is empty
-        let new_username = self.username.trimmingCharacters(in: .whitespacesAndNewlines)
-        let new_password = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
-        let new_secondpassword = self.secondPassword.trimmingCharacters(in: .whitespacesAndNewlines)
-        let new_email = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
-        if new_username == "" || new_password == "" ||  new_secondpassword == "" || new_email == "" {
-            self.errorMessage = "Please fill in all fields"
-            return
-        }
-        // Checks if password passes all criteria
-        if Helpers.passwordCheck(new_password) == false || self.password != new_password {
-            self.errorMessage = "Password must contain at least 8 characters, a special character and a number."
-            return
-        }
-        // Checks if email is valid
-        if Helpers.emailCheck(new_email) == false {
-            self.errorMessage = "Please make sure that the given email is valid."
-            return
-        }
-        // Checks if password is equal to second password
-        if self.password != self.secondPassword {
-            self.errorMessage = "Please makes sure that the passwords given are the same."
-            return
-        }
+        model.loggedIn = true
         
-        
-        // Create the user if all conditions pass and log him in
-        Auth.auth().createUser(withEmail: self.email, password: self.password) { result, error in
-            if error != nil {
-                // There was an error creating the user (temporary)
-                self.errorMessage = "Error while creating the user. Please try again later."
-            }
-            else {
-                // User was created, store username and UID
-                let db = Firestore.firestore()
-                
-                db.collection("users").addDocument(data: ["username": self.username, "uid": result!.user.uid])
-                model.loggedIn = true
-                
-            }
-        }
+//        if secondPassword != password {
+//            errorMessage = "Passwords do not match"
+//            return
+//        }
+//
+//        if username == "" {
+//            errorMessage = "Please fill out all details"
+//            return
+//        }
+//
+//        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+//            DispatchQueue.main.async {
+//
+//                guard error == nil else {
+//                    errorMessage = error!.localizedDescription
+//                    return
+//                }
+//
+//                let user = Auth.auth().currentUser
+//                let db = Firestore.firestore()
+//                let reference = db.collection("users").document(user!.uid)
+//
+//                reference.setData(["username": username], merge: true)
+//
+//                model.user = User()
+//
+//                let currentUser = model.user
+//                currentUser.username = username
+//
+//                model.checkLogin()
+//            }
+//        }
         
     }
 }

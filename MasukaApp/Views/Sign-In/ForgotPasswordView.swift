@@ -75,7 +75,7 @@ struct ForgotPasswordView: View {
                 // MARK: - Subtitle
                 Text("Enter your email address or username and we will send you a link to get back to your account.")
                     .multilineTextAlignment(.center)
-                    .padding(40)
+                    .padding(20)
                 
                 
                 
@@ -84,8 +84,7 @@ struct ForgotPasswordView: View {
                     Text("Username").tag(ResetType.username)
                     Text("Email").tag(ResetType.email)
                 }
-                .pickerStyle(DefaultPickerStyle())
-                .frame(width: 250, height: 80)
+                .pickerStyle(WheelPickerStyle())
                 .onChange(of: resetType) { _ in
                     email = ""
                     username = ""

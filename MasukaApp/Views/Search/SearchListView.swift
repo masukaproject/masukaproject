@@ -13,6 +13,7 @@ struct SearchListView: View {
             Rectangle()
                 .fill(Color(red: 0.863, green: 0.863, blue: 0.875))
                 .cornerRadius(53)
+            
             VStack (spacing: 8) {
                 Text("Found 25 Results")
                     .font(.largeTitle)

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 class ProjectModel: ObservableObject {
     
@@ -15,4 +16,8 @@ class ProjectModel: ObservableObject {
     
     // Projects Info
     @Published var projects = [Project]()
+    
+    func checkLogin() {
+        self.loggedIn = Auth.auth().currentUser == nil ? false : true
+    }
 }

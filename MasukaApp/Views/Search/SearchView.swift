@@ -9,10 +9,14 @@ import SwiftUI
 
 struct SearchView: View {
     var body: some View {
-        VStack{
-            SearchTypeView()
-            SearchListView()
-//            SearchOptionsView()
+        NavigationView {
+            VStack{
+                SearchTypeView()
+                    .navigationTitle("Search")
+                    .navigationBarHidden(true)
+                SearchListView()
+    //            SearchOptionsView()
+            }
         }
     }
 }
