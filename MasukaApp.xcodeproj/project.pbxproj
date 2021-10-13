@@ -24,6 +24,8 @@
 		00CA18E02712B952004E7488 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA18DF2712B952004E7488 /* SideMenuView.swift */; };
 		00CA18E22712BA9D004E7488 /* SideMenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA18E12712BA9D004E7488 /* SideMenuOptions.swift */; };
 		00CA18E42712C1A3004E7488 /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CA18E32712C1A3004E7488 /* SideMenuOptionView.swift */; };
+		00D60FFF27169CBD00A85AAF /* SavedProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D60FFE27169CBD00A85AAF /* SavedProjectsView.swift */; };
+		00D6100227169D0500A85AAF /* MyProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6100127169D0500A85AAF /* MyProjectsView.swift */; };
 		00E227E026AE569100E5E39D /* MasukaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227DF26AE569100E5E39D /* MasukaApp.swift */; };
 		00E227E226AE569100E5E39D /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E227E126AE569100E5E39D /* TabsView.swift */; };
 		00E227E426AE569300E5E39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E227E326AE569300E5E39D /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		00CA18DF2712B952004E7488 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		00CA18E12712BA9D004E7488 /* SideMenuOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptions.swift; sourceTree = "<group>"; };
 		00CA18E32712C1A3004E7488 /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
+		00D60FFE27169CBD00A85AAF /* SavedProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedProjectsView.swift; sourceTree = "<group>"; };
+		00D6100127169D0500A85AAF /* MyProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProjectsView.swift; sourceTree = "<group>"; };
 		00E227DC26AE569100E5E39D /* MasukaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasukaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E227DF26AE569100E5E39D /* MasukaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasukaApp.swift; sourceTree = "<group>"; };
 		00E227E126AE569100E5E39D /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
@@ -106,6 +110,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00D60FFD27169C8800A85AAF /* SavedProjects */ = {
+			isa = PBXGroup;
+			children = (
+				00D60FFE27169CBD00A85AAF /* SavedProjectsView.swift */,
+			);
+			path = SavedProjects;
+			sourceTree = "<group>";
+		};
+		00D6100027169CF000A85AAF /* MyProjects */ = {
+			isa = PBXGroup;
+			children = (
+				00D6100127169D0500A85AAF /* MyProjectsView.swift */,
+			);
+			path = MyProjects;
+			sourceTree = "<group>";
+		};
+		00D610032716BEAE00A85AAF /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				00CA18DD2712B86B004E7488 /* SelectionView.swift */,
+				00CA18DF2712B952004E7488 /* SideMenuView.swift */,
+				00CA18E32712C1A3004E7488 /* SideMenuOptionView.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 		00E227D326AE569100E5E39D = {
 			isa = PBXGroup;
 			children = (
@@ -162,12 +192,12 @@
 			children = (
 				0055A5E026BBB2E900C7CB5D /* StartView.swift */,
 				00E227E126AE569100E5E39D /* TabsView.swift */,
-				00CA18DD2712B86B004E7488 /* SelectionView.swift */,
-				00CA18DF2712B952004E7488 /* SideMenuView.swift */,
-				00CA18E32712C1A3004E7488 /* SideMenuOptionView.swift */,
+				00D610032716BEAE00A85AAF /* SideMenu */,
 				00E227F626AE63E500E5E39D /* Sign-In */,
 				00E227F326AE5C6000E5E39D /* Home */,
 				00E227FE26AE66BC00E5E39D /* Search */,
+				00D6100027169CF000A85AAF /* MyProjects */,
+				00D60FFD27169C8800A85AAF /* SavedProjects */,
 				00E2280026AE66C400E5E39D /* Profile */,
 				00E227FF26AE66C100E5E39D /* Settings */,
 				00E521A526B527F800723DC0 /* Common */,
@@ -189,8 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				00E2280126AE672600E5E39D /* HomeView.swift */,
-				00E2280926AE6FA800E5E39D /* ProjectListView.swift */,
-				00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -241,6 +269,8 @@
 		00E521A526B527F800723DC0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				00E2280926AE6FA800E5E39D /* ProjectListView.swift */,
+				00E2280B26AE6FB300E5E39D /* ProjectCardView.swift */,
 				0055A5EA26BBB35700C7CB5D /* CustomTextField.swift */,
 				00E521A626B5281E00723DC0 /* LargeButton.swift */,
 				008C7C4226B3C36D0036110F /* UserInputField.swift */,
@@ -392,9 +422,11 @@
 				9417954926E996CE002D6FB6 /* FrontPageView.swift in Sources */,
 				00E227FA26AE640800E5E39D /* UpdateAccountView.swift in Sources */,
 				00CA18E22712BA9D004E7488 /* SideMenuOptions.swift in Sources */,
+				00D6100227169D0500A85AAF /* MyProjectsView.swift in Sources */,
 				00E2280626AE673E00E5E39D /* ProfileView.swift in Sources */,
 				0055A5E326BBB31400C7CB5D /* ProjectModel.swift in Sources */,
 				00E2280226AE672600E5E39D /* HomeView.swift in Sources */,
+				00D60FFF27169CBD00A85AAF /* SavedProjectsView.swift in Sources */,
 				94A57E2B26B9049700A0317D /* SearchListView.swift in Sources */,
 				008C7C4326B3C36D0036110F /* UserInputField.swift in Sources */,
 				94A57E2D26B9083900A0317D /* SearchBarView.swift in Sources */,

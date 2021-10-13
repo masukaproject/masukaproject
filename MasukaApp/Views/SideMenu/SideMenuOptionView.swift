@@ -15,6 +15,7 @@ struct SideMenuOptionView: View {
         HStack {
             Image(systemName: option.imageName)
                 .resizable()
+                .scaledToFit()
                 .frame(width: 25, height: 25)
                 .padding()
             

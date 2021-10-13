@@ -25,15 +25,15 @@ struct SelectionView: View {
                     case .search:
                         SearchView()
                     case .myProjects:
-                        Text("My Projects")
+                        MyProjectsView()
                     case .savedProjects:
-                        Text("Saved Projects")
+                        SavedProjectsView()
                     case .profile:
                         ProfileView()
                     case .settings:
                         SettingsView()
                     case .signout:
-                        Text("Sign Out")
+                        EmptyView()
                     }
                 }
                 .navigationBarTitle(model.currentView.title)
